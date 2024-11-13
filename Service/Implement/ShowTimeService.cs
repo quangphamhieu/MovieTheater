@@ -2,9 +2,9 @@
 using MovieTheater.Dtos.ShowTime;
 using MovieTheater.Entities;
 using Microsoft.EntityFrameworkCore;
-using MovieTheater.Service.Implement;
+using MovieTheater.Service.Abstract;
 
-namespace MovieTheater.Service.Abstract
+namespace MovieTheater.Service.Implement
 {
     public class ShowTimeService : IShowTimeService
     {

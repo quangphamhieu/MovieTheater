@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace MovieTheater.Service.Implement
+namespace MovieTheater.Service.Abstract
 {
     public interface IShowTimeService
     {

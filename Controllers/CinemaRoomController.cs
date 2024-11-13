@@ -1,13 +1,15 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using MovieTheater.Dtos.CinemaRoom;
-using MovieTheater.Service.Implement;
 using MovieTheater.Service.Abstract;
+using System;
 using System.Threading.Tasks;
 
 namespace MovieTheater.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize(Roles = "Admin")] // Restrict access to Admin role only
     public class CinemaRoomController : ControllerBase
     {
         private readonly ICinemaRoomService _cinemaRoomService;
@@ -20,44 +22,73 @@ namespace MovieTheater.Controllers
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
-            var cinemaRooms = await _cinemaRoomService.GetAllCinemaRoomsAsync();
-            return Ok(cinemaRooms);
+            try
+            {
+                var cinemaRooms = await _cinemaRoomService.GetAllCinemaRoomsAsync();
+                return Ok(cinemaRooms);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { message = ex.Message });
+            }
         }
 
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById(int id)
         {
-            var cinemaRoom = await _cinemaRoomService.GetCinemaRoomByIdAsync(id);
-            if (cinemaRoom == null) return NotFound();
-
-            return Ok(cinemaRoom);
+            try
+            {
+                var cinemaRoom = await _cinemaRoomService.GetCinemaRoomByIdAsync(id);
+                return cinemaRoom == null ? NotFound() : Ok(cinemaRoom);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { message = ex.Message });
+            }
         }
 
         [HttpPost]
         public async Task<IActionResult> Create([FromBody] CreateCinemaRoomDto createCinemaRoomDto)
         {
-            var cinemaRoom = await _cinemaRoomService.CreateCinemaRoomAsync(createCinemaRoomDto);
-            if (cinemaRoom == null) return BadRequest("Cinema not found");
-
-            return CreatedAtAction(nameof(GetById), new { id = cinemaRoom.Id }, cinemaRoom);
+            try
+            {
+                var cinemaRoom = await _cinemaRoomService.CreateCinemaRoomAsync(createCinemaRoomDto);
+                return cinemaRoom == null
+                    ? BadRequest("Cinema not found")
+                    : CreatedAtAction(nameof(GetById), new { id = cinemaRoom.Id }, cinemaRoom);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { message = ex.Message });
+            }
         }
 
         [HttpPut("{id}")]
         public async Task<IActionResult> Update(int id, [FromBody] UpdateCinemaRoomDto updateCinemaRoomDto)
         {
-            var cinemaRoom = await _cinemaRoomService.UpdateCinemaRoomAsync(id, updateCinemaRoomDto);
-            if (cinemaRoom == null) return NotFound();
-
-            return Ok(cinemaRoom);
+            try
+            {
+                var cinemaRoom = await _cinemaRoomService.UpdateCinemaRoomAsync(id, updateCinemaRoomDto);
+                return cinemaRoom == null ? NotFound() : Ok(cinemaRoom);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { message = ex.Message });
+            }
         }
 
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {
-            var deleted = await _cinemaRoomService.DeleteCinemaRoomAsync(id);
-            if (!deleted) return NotFound();
-
-            return NoContent();
+            try
+            {
+                var deleted = await _cinemaRoomService.DeleteCinemaRoomAsync(id);
+                return deleted ? NoContent() : NotFound();
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { message = ex.Message });
+            }
         }
     }
 }

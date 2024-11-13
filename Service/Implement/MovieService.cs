@@ -5,12 +5,12 @@ using MovieTheater.Dtos.Director;
 using MovieTheater.Dtos.Genre;
 using MovieTheater.Dtos.Movie;
 using MovieTheater.Entities;
-using MovieTheater.Service.Implement;
+using MovieTheater.Service.Abstract;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace MovieTheater.Service.Abstract
+namespace MovieTheater.Service.Implement
 {
     public class MovieService : IMovieService
     {
@@ -141,6 +141,31 @@ namespace MovieTheater.Service.Abstract
             return await GetByIdAsync(movie.Id);
         }
 
+        public async Task<List<MovieDto>> SearchMoviesByTitleAsync(string title)
+        {
+            var movies = await _context.Movies
+                .Where(m => m.Title.Contains(title)) // Tìm kiếm phim có chứa "title"
+                .Include(m => m.Director)
+                .Include(m => m.MovieActors)
+                    .ThenInclude(ma => ma.Actor)
+                .Include(m => m.MovieGenres)
+                    .ThenInclude(mg => mg.Genre)
+                .Select(m => new MovieDto
+                {
+                    Id = m.Id,
+                    Title = m.Title,
+                    Description = m.Description,
+                    ReleaseDate = m.ReleaseDate,
+                    Duration = m.Duration,
+                    Country = m.Country,
+                    PosterUrl = m.PosterUrl,
+                    Director = m.Director != null ? new DirectorDto { Id = m.Director.Id, Name = m.Director.Name } : null,
+                    Actors = m.MovieActors.Select(ma => new ActorDto { Id = ma.Actor.Id, Name = ma.Actor.Name }).ToList(),
+                    Genres = m.MovieGenres.Select(mg => new GenreDto { Id = mg.Genre.Id, Name = mg.Genre.Name }).ToList()
+                }).ToListAsync();
+
+            return movies; // Trả về danh sách các phim phù hợp
+        }
         // Update an existing movie with associated Actors and Genres
         public async Task<MovieDto> UpdateAsync(int id, UpdateMovieDto dto)
         {

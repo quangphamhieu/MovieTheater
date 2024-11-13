@@ -5,9 +5,9 @@ using Microsoft.EntityFrameworkCore;
 using MovieTheater.DbContexts;
 using MovieTheater.Dtos.Cinema;
 using MovieTheater.Entities;
-using MovieTheater.Service.Implement;
+using MovieTheater.Service.Abstract;
 
-namespace MovieTheater.Service.Abstract
+namespace MovieTheater.Service.Implement
 {
     public class CinemaService : ICinemaService
     {

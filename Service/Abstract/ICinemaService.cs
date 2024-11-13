@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using MovieTheater.Dtos.Cinema;
 
-namespace MovieTheater.Service.Implement 
+namespace MovieTheater.Service.Abstract
 {
     public interface ICinemaService
     {

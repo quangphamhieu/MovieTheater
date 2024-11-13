@@ -1,6 +1,6 @@
 ﻿using MovieTheater.Dtos.Director;
 
-namespace MovieTheater.Service.Implement
+namespace MovieTheater.Service.Abstract
 {
     public interface IDirectorService
     {

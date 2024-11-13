@@ -17,6 +17,8 @@ namespace MovieTheater.DbContexts
         public DbSet<Cinema> Cinemas { get; set; }
         public DbSet<CinemaRoom> CinemaRooms { get; set; }
         public DbSet<ShowTime> ShowTimes { get; set; }
+        public DbSet<User> Users { get; set; }
+        public DbSet<Role> Roles { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -69,7 +71,31 @@ namespace MovieTheater.DbContexts
                 .HasOne(st => st.Movie)
                 .WithMany(m => m.ShowTimes)
                 .HasForeignKey(st => st.MovieId);
+            
+            // Cấu hình mối quan hệ giữa User và Role
+            modelBuilder.Entity<User>()
+                .HasOne(u => u.Role)
+                .WithMany(r => r.Users)
+                .HasForeignKey(u => u.RoleId);
+            
+            var adminRole = new Role { Id = 1, RoleName = "Admin" };
+            var customerRole = new Role { Id = 2, RoleName = "Customer" };
 
+            modelBuilder.Entity<Role>().HasData(adminRole, customerRole);
+
+            var adminUser = new User
+            {
+                Id = 1,
+                FullName = "Admin User",
+                Email = "admin@example.com",
+                Password = "Admin@123", 
+                PhoneNumber = "0123456789",
+                Address = "123 Admin Street",
+                RoleId = adminRole.Id
+            };
+
+            modelBuilder.Entity<User>().HasData(adminUser);
         }
+
     }
 }

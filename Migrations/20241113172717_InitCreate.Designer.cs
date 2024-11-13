@@ -12,7 +12,7 @@ using MovieTheater.DbContexts;
 namespace MovieTheater.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20241111041715_InitCreate")]
+    [Migration("20241113172717_InitCreate")]
     partial class InitCreate
     {
         /// <inheritdoc />
@@ -195,6 +195,35 @@ namespace MovieTheater.Migrations
                     b.ToTable("MovieGenres");
                 });
 
+            modelBuilder.Entity("MovieTheater.Entities.Role", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("RoleName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Roles");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            RoleName = "Admin"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            RoleName = "Customer"
+                        });
+                });
+
             modelBuilder.Entity("MovieTheater.Entities.ShowTime", b =>
                 {
                     b.Property<int>("Id")
@@ -222,6 +251,56 @@ namespace MovieTheater.Migrations
                     b.HasIndex("MovieId");
 
                     b.ToTable("ShowTimes");
+                });
+
+            modelBuilder.Entity("MovieTheater.Entities.User", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Address")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FullName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PhoneNumber")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("RoleId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("RoleId");
+
+                    b.ToTable("Users");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Address = "123 Admin Street",
+                            Email = "admin@example.com",
+                            FullName = "Admin User",
+                            Password = "Admin@123",
+                            PhoneNumber = "0123456789",
+                            RoleId = 1
+                        });
                 });
 
             modelBuilder.Entity("MovieTheater.Entities.CinemaRoom", b =>
@@ -303,6 +382,17 @@ namespace MovieTheater.Migrations
                     b.Navigation("Movie");
                 });
 
+            modelBuilder.Entity("MovieTheater.Entities.User", b =>
+                {
+                    b.HasOne("MovieTheater.Entities.Role", "Role")
+                        .WithMany("Users")
+                        .HasForeignKey("RoleId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Role");
+                });
+
             modelBuilder.Entity("MovieTheater.Entities.Actor", b =>
                 {
                     b.Navigation("MovieActors");
@@ -335,6 +425,11 @@ namespace MovieTheater.Migrations
                     b.Navigation("MovieGenres");
 
                     b.Navigation("ShowTimes");
+                });
+
+            modelBuilder.Entity("MovieTheater.Entities.Role", b =>
+                {
+                    b.Navigation("Users");
                 });
 #pragma warning restore 612, 618
         }

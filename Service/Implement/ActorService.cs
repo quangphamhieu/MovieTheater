@@ -1,10 +1,10 @@
 ﻿using MovieTheater.DbContexts;
 using MovieTheater.Dtos.Actor;
 using MovieTheater.Entities;
-using MovieTheater.Service.Implement;
+using MovieTheater.Service.Abstract;
 using Microsoft.EntityFrameworkCore;
 
-namespace MovieTheater.Service.Abstract
+namespace MovieTheater.Service.Implement
 {
     public class ActorService : IActorService
     {

@@ -1,6 +1,6 @@
 ﻿using MovieTheater.Dtos.Genre;
 
-namespace MovieTheater.Service.Implement
+namespace MovieTheater.Service.Abstract
 {
     public interface IGenreService
     {
