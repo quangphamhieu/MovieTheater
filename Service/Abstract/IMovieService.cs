@@ -8,7 +8,7 @@ namespace MovieTheater.Service.Abstract
         Task<MovieDto> GetByIdAsync(int id);
         Task<MovieDto> GetByTitleAsync(string title);
         Task<MovieDto> CreateAsync(CreateMovieDto dto);
-        Task<List<MovieDto>> SearchMoviesByTitleAsync(string title)
+        Task<List<MovieDto>> SearchMoviesByTitleAsync(string title);
         Task<MovieDto> UpdateAsync(int id, UpdateMovieDto dto);
         Task<bool> DeleteAsync(int id);
     }

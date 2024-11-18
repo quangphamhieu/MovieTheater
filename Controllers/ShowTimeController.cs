@@ -9,7 +9,7 @@ namespace MovieTheater.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize(Roles = "Admin, Manager")] // Restrict access to Admin and Manager roles
+    [Authorize(Roles = "Admin")] // Restrict access to Admin and Manager roles
     public class ShowTimeController : ControllerBase
     {
         private readonly IShowTimeService _showTimeService;

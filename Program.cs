@@ -66,6 +66,9 @@ namespace MovieTheater
             builder.Services.AddScoped<IShowTimeService, ShowTimeService>();
             builder.Services.AddScoped<IRoleService, RoleService>();
             builder.Services.AddScoped<IUserService, UserService>();
+            builder.Services.AddScoped<ICommentService, CommentService>();
+            builder.Services.AddScoped<ISeatService, SeatService>();
+            builder.Services.AddScoped<ITicketService, TicketService>();
             builder.Services.AddHttpContextAccessor();
 
             builder.Services.AddScoped<AuthenticationService>();

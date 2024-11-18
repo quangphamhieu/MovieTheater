@@ -17,5 +17,7 @@ namespace MovieTheater.Entities
         public ICollection<MovieActor> MovieActors { get; set; }
         public ICollection<MovieGenre> MovieGenres { get; set; }
         public ICollection<ShowTime> ShowTimes { get; set; }
+        public ICollection<Comment> Comments { get; set; }
+
     }
 }

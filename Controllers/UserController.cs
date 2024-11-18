@@ -76,7 +76,7 @@ namespace MovieTheater.Controllers
         }
 
         // Tạo người dùng mới
-        [HttpPost]
+        [HttpPost("signup")]
         public async Task<IActionResult> Create([FromBody] CreateUserDto dto)
         {
             try

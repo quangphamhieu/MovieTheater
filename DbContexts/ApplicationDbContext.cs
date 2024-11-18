@@ -19,6 +19,11 @@ namespace MovieTheater.DbContexts
         public DbSet<ShowTime> ShowTimes { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<Role> Roles { get; set; }
+        public DbSet<Comment> Comments { get; set; }
+        public DbSet<Seat> Seats { get; set; }
+        public DbSet<Ticket> Tickets { get; set; }
+        public DbSet<TicketSeat> TicketSeats { get; set; }
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -71,13 +76,46 @@ namespace MovieTheater.DbContexts
                 .HasOne(st => st.Movie)
                 .WithMany(m => m.ShowTimes)
                 .HasForeignKey(st => st.MovieId);
-            
+
             // Cấu hình mối quan hệ giữa User và Role
             modelBuilder.Entity<User>()
                 .HasOne(u => u.Role)
                 .WithMany(r => r.Users)
                 .HasForeignKey(u => u.RoleId);
-            
+
+            // Configure one-to-many relationship between User and Comment
+            modelBuilder.Entity<Comment>()
+                .HasOne(c => c.User)
+                .WithMany(u => u.Comments)
+                .HasForeignKey(c => c.UserId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            // Configure one-to-many relationship between Movie and Comment
+            modelBuilder.Entity<Comment>()
+                .HasOne(c => c.Movie)
+                .WithMany(m => m.Comments)
+                .HasForeignKey(c => c.MovieId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            modelBuilder.Entity<TicketSeat>()
+                .HasOne(ts => ts.Ticket)
+                .WithMany(t => t.TicketSeats)
+                .HasForeignKey(ts => ts.TicketId)
+                .OnDelete(DeleteBehavior.NoAction);  // Đặt hành động xóa là NoAction
+
+            modelBuilder.Entity<TicketSeat>()
+                .HasOne(ts => ts.Seat)
+                .WithMany()
+                .HasForeignKey(ts => ts.SeatId)
+                .OnDelete(DeleteBehavior.NoAction);  // Đặt hành động xóa là NoAction cho Seat
+
+            // Cấu hình xóa cho các bảng khác (nếu có)
+            modelBuilder.Entity<Ticket>()
+                .HasOne(t => t.User)
+                .WithMany(u => u.Tickets)
+                .HasForeignKey(t => t.UserId)
+                .OnDelete(DeleteBehavior.NoAction);  // Đặt hành động xóa là NoAction cho User
+
             var adminRole = new Role { Id = 1, RoleName = "Admin" };
             var customerRole = new Role { Id = 2, RoleName = "Customer" };
 
@@ -88,7 +126,7 @@ namespace MovieTheater.DbContexts
                 Id = 1,
                 FullName = "Admin User",
                 Email = "admin@example.com",
-                Password = "Admin@123", 
+                Password = "Admin@123",
                 PhoneNumber = "0123456789",
                 Address = "123 Admin Street",
                 RoleId = adminRole.Id
@@ -96,6 +134,7 @@ namespace MovieTheater.DbContexts
 
             modelBuilder.Entity<User>().HasData(adminUser);
         }
+
 
     }
 }
