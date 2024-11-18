@@ -3,24 +3,80 @@
   "WorkspaceRootPath": "D:\\Server\\MovieTheater\\MovieTheater\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8EE64ED8-E247-436E-8590-932010F65211}|MovieTheater.csproj|d:\\server\\movietheater\\movietheater\\service\\implement\\ticketservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8EE64ED8-E247-436E-8590-932010F65211}|MovieTheater.csproj|solutionrelative:service\\implement\\ticketservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8EE64ED8-E247-436E-8590-932010F65211}|MovieTheater.csproj|d:\\server\\movietheater\\movietheater\\service\\abstract\\iticketservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8EE64ED8-E247-436E-8590-932010F65211}|MovieTheater.csproj|solutionrelative:service\\abstract\\iticketservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8EE64ED8-E247-436E-8590-932010F65211}|MovieTheater.csproj|d:\\server\\movietheater\\movietheater\\controllers\\notificationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8EE64ED8-E247-436E-8590-932010F65211}|MovieTheater.csproj|solutionrelative:controllers\\notificationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8EE64ED8-E247-436E-8590-932010F65211}|MovieTheater.csproj|d:\\server\\movietheater\\movietheater\\controllers\\ticketcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8EE64ED8-E247-436E-8590-932010F65211}|MovieTheater.csproj|solutionrelative:controllers\\ticketcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8EE64ED8-E247-436E-8590-932010F65211}|MovieTheater.csproj|d:\\server\\movietheater\\movietheater\\dtos\\ticket\\ticketdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8EE64ED8-E247-436E-8590-932010F65211}|MovieTheater.csproj|solutionrelative:dtos\\ticket\\ticketdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8EE64ED8-E247-436E-8590-932010F65211}|MovieTheater.csproj|d:\\server\\movietheater\\movietheater\\service\\implement\\ticketservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8EE64ED8-E247-436E-8590-932010F65211}|MovieTheater.csproj|solutionrelative:service\\implement\\ticketservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EE64ED8-E247-436E-8590-932010F65211}|MovieTheater.csproj|d:\\server\\movietheater\\movietheater\\service\\implement\\notificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8EE64ED8-E247-436E-8590-932010F65211}|MovieTheater.csproj|solutionrelative:service\\implement\\notificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EE64ED8-E247-436E-8590-932010F65211}|MovieTheater.csproj|d:\\server\\movietheater\\movietheater\\controllers\\moviecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8EE64ED8-E247-436E-8590-932010F65211}|MovieTheater.csproj|solutionrelative:controllers\\moviecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EE64ED8-E247-436E-8590-932010F65211}|MovieTheater.csproj|d:\\server\\movietheater\\movietheater\\dbcontexts\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8EE64ED8-E247-436E-8590-932010F65211}|MovieTheater.csproj|solutionrelative:dbcontexts\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EE64ED8-E247-436E-8590-932010F65211}|MovieTheater.csproj|d:\\server\\movietheater\\movietheater\\service\\abstract\\inotificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8EE64ED8-E247-436E-8590-932010F65211}|MovieTheater.csproj|solutionrelative:service\\abstract\\inotificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EE64ED8-E247-436E-8590-932010F65211}|MovieTheater.csproj|d:\\server\\movietheater\\movietheater\\migrations\\applicationdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8EE64ED8-E247-436E-8590-932010F65211}|MovieTheater.csproj|solutionrelative:migrations\\applicationdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EE64ED8-E247-436E-8590-932010F65211}|MovieTheater.csproj|d:\\server\\movietheater\\movietheater\\migrations\\20241118035818_initcreatenoti.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8EE64ED8-E247-436E-8590-932010F65211}|MovieTheater.csproj|solutionrelative:migrations\\20241118035818_initcreatenoti.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EE64ED8-E247-436E-8590-932010F65211}|MovieTheater.csproj|d:\\server\\movietheater\\movietheater\\entities\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8EE64ED8-E247-436E-8590-932010F65211}|MovieTheater.csproj|solutionrelative:entities\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EE64ED8-E247-436E-8590-932010F65211}|MovieTheater.csproj|d:\\server\\movietheater\\movietheater\\dtos\\notification\\usernotificationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8EE64ED8-E247-436E-8590-932010F65211}|MovieTheater.csproj|solutionrelative:dtos\\notification\\usernotificationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EE64ED8-E247-436E-8590-932010F65211}|MovieTheater.csproj|d:\\server\\movietheater\\movietheater\\dtos\\notification\\notificationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8EE64ED8-E247-436E-8590-932010F65211}|MovieTheater.csproj|solutionrelative:dtos\\notification\\notificationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EE64ED8-E247-436E-8590-932010F65211}|MovieTheater.csproj|d:\\server\\movietheater\\movietheater\\entities\\usernotification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8EE64ED8-E247-436E-8590-932010F65211}|MovieTheater.csproj|solutionrelative:entities\\usernotification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EE64ED8-E247-436E-8590-932010F65211}|MovieTheater.csproj|d:\\server\\movietheater\\movietheater\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8EE64ED8-E247-436E-8590-932010F65211}|MovieTheater.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EE64ED8-E247-436E-8590-932010F65211}|MovieTheater.csproj|d:\\server\\movietheater\\movietheater\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8EE64ED8-E247-436E-8590-932010F65211}|MovieTheater.csproj|solutionrelative:controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EE64ED8-E247-436E-8590-932010F65211}|MovieTheater.csproj|d:\\server\\movietheater\\movietheater\\dtos\\notification\\createnotificationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8EE64ED8-E247-436E-8590-932010F65211}|MovieTheater.csproj|solutionrelative:dtos\\notification\\createnotificationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8EE64ED8-E247-436E-8590-932010F65211}|MovieTheater.csproj|d:\\server\\movietheater\\movietheater\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8EE64ED8-E247-436E-8590-932010F65211}|MovieTheater.csproj|solutionrelative:entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EE64ED8-E247-436E-8590-932010F65211}|MovieTheater.csproj|d:\\server\\movietheater\\movietheater\\service\\abstract\\iticketservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8EE64ED8-E247-436E-8590-932010F65211}|MovieTheater.csproj|solutionrelative:service\\abstract\\iticketservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EE64ED8-E247-436E-8590-932010F65211}|MovieTheater.csproj|d:\\server\\movietheater\\movietheater\\dtos\\ticket\\ticketdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8EE64ED8-E247-436E-8590-932010F65211}|MovieTheater.csproj|solutionrelative:dtos\\ticket\\ticketdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8EE64ED8-E247-436E-8590-932010F65211}|MovieTheater.csproj|d:\\server\\movietheater\\movietheater\\entities\\ticketseat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -31,28 +87,12 @@
       "RelativeMoniker": "D:0:0:{8EE64ED8-E247-436E-8590-932010F65211}|MovieTheater.csproj|solutionrelative:entities\\ticket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8EE64ED8-E247-436E-8590-932010F65211}|MovieTheater.csproj|d:\\server\\movietheater\\movietheater\\dbcontexts\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8EE64ED8-E247-436E-8590-932010F65211}|MovieTheater.csproj|solutionrelative:dbcontexts\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8EE64ED8-E247-436E-8590-932010F65211}|MovieTheater.csproj|d:\\server\\movietheater\\movietheater\\migrations\\applicationdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8EE64ED8-E247-436E-8590-932010F65211}|MovieTheater.csproj|solutionrelative:migrations\\applicationdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{8EE64ED8-E247-436E-8590-932010F65211}|MovieTheater.csproj|d:\\server\\movietheater\\movietheater\\migrations\\20241118010827_adduserticketsrelationship.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8EE64ED8-E247-436E-8590-932010F65211}|MovieTheater.csproj|solutionrelative:migrations\\20241118010827_adduserticketsrelationship.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8EE64ED8-E247-436E-8590-932010F65211}|MovieTheater.csproj|d:\\server\\movietheater\\movietheater\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{8EE64ED8-E247-436E-8590-932010F65211}|MovieTheater.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8EE64ED8-E247-436E-8590-932010F65211}|MovieTheater.csproj|d:\\server\\movietheater\\movietheater\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8EE64ED8-E247-436E-8590-932010F65211}|MovieTheater.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8EE64ED8-E247-436E-8590-932010F65211}|MovieTheater.csproj|d:\\server\\movietheater\\movietheater\\controllers\\moviecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8EE64ED8-E247-436E-8590-932010F65211}|MovieTheater.csproj|solutionrelative:controllers\\moviecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8EE64ED8-E247-436E-8590-932010F65211}|MovieTheater.csproj|d:\\server\\movietheater\\movietheater\\controllers\\showtimecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -93,10 +133,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{8EE64ED8-E247-436E-8590-932010F65211}|MovieTheater.csproj|d:\\server\\movietheater\\movietheater\\entities\\cinemaroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8EE64ED8-E247-436E-8590-932010F65211}|MovieTheater.csproj|solutionrelative:entities\\cinemaroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8EE64ED8-E247-436E-8590-932010F65211}|MovieTheater.csproj|d:\\server\\movietheater\\movietheater\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8EE64ED8-E247-436E-8590-932010F65211}|MovieTheater.csproj|solutionrelative:controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8EE64ED8-E247-436E-8590-932010F65211}|MovieTheater.csproj|d:\\server\\movietheater\\movietheater\\migrations\\20241114012024_addcommentstable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -286,7 +322,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -294,72 +330,232 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 6,
+              "Title": "INotificationService.cs",
+              "DocumentMoniker": "D:\\Server\\MovieTheater\\MovieTheater\\Service\\Abstract\\INotificationService.cs",
+              "RelativeDocumentMoniker": "Service\\Abstract\\INotificationService.cs",
+              "ToolTip": "D:\\Server\\MovieTheater\\MovieTheater\\Service\\Abstract\\INotificationService.cs",
+              "RelativeToolTip": "Service\\Abstract\\INotificationService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAA9AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-18T03:01:05.641Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MovieController.cs",
+              "DocumentMoniker": "D:\\Server\\MovieTheater\\MovieTheater\\Controllers\\MovieController.cs",
+              "RelativeDocumentMoniker": "Controllers\\MovieController.cs",
+              "ToolTip": "D:\\Server\\MovieTheater\\MovieTheater\\Controllers\\MovieController.cs",
+              "RelativeToolTip": "Controllers\\MovieController.cs",
+              "ViewState": "AQIAAIUAAAAAAAAAAAAAAJEAAABOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T18:28:06.4Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "NotificationService.cs",
+              "DocumentMoniker": "D:\\Server\\MovieTheater\\MovieTheater\\Service\\Implement\\NotificationService.cs",
+              "RelativeDocumentMoniker": "Service\\Implement\\NotificationService.cs",
+              "ToolTip": "D:\\Server\\MovieTheater\\MovieTheater\\Service\\Implement\\NotificationService.cs",
+              "RelativeToolTip": "Service\\Implement\\NotificationService.cs",
+              "ViewState": "AQIAADQAAAAAAAAAAAAuwE4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-18T03:01:27.831Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "ApplicationDbContext.cs",
               "DocumentMoniker": "D:\\Server\\MovieTheater\\MovieTheater\\DbContexts\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "DbContexts\\ApplicationDbContext.cs",
               "ToolTip": "D:\\Server\\MovieTheater\\MovieTheater\\DbContexts\\ApplicationDbContext.cs",
               "RelativeToolTip": "DbContexts\\ApplicationDbContext.cs",
-              "ViewState": "AQIAAFkAAAAAAAAAAAAYwGMAAAAtAAAA",
+              "ViewState": "AQIAAG8AAAAAAAAAAAAAAIAAAAAzAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-13T16:24:36.724Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Ticket.cs",
-              "DocumentMoniker": "D:\\Server\\MovieTheater\\MovieTheater\\Entities\\Ticket.cs",
-              "RelativeDocumentMoniker": "Entities\\Ticket.cs",
-              "ToolTip": "D:\\Server\\MovieTheater\\MovieTheater\\Entities\\Ticket.cs",
-              "RelativeToolTip": "Entities\\Ticket.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T00:43:03.059Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "TicketSeat.cs",
-              "DocumentMoniker": "D:\\Server\\MovieTheater\\MovieTheater\\Entities\\TicketSeat.cs",
-              "RelativeDocumentMoniker": "Entities\\TicketSeat.cs",
-              "ToolTip": "D:\\Server\\MovieTheater\\MovieTheater\\Entities\\TicketSeat.cs",
-              "RelativeToolTip": "Entities\\TicketSeat.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T00:37:58.093Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "User.cs",
-              "DocumentMoniker": "D:\\Server\\MovieTheater\\MovieTheater\\Entities\\User.cs",
-              "RelativeDocumentMoniker": "Entities\\User.cs",
-              "ToolTip": "D:\\Server\\MovieTheater\\MovieTheater\\Entities\\User.cs",
-              "RelativeToolTip": "Entities\\User.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-13T16:26:31.437Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "TicketService.cs",
+              "DocumentMoniker": "D:\\Server\\MovieTheater\\MovieTheater\\Service\\Implement\\TicketService.cs",
+              "RelativeDocumentMoniker": "Service\\Implement\\TicketService.cs",
+              "ToolTip": "D:\\Server\\MovieTheater\\MovieTheater\\Service\\Implement\\TicketService.cs",
+              "RelativeToolTip": "Service\\Implement\\TicketService.cs",
+              "ViewState": "AQIAACcAAAAAAAAAAAAYwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-18T04:12:56.64Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "NotificationController.cs",
+              "DocumentMoniker": "D:\\Server\\MovieTheater\\MovieTheater\\Controllers\\NotificationController.cs",
+              "RelativeDocumentMoniker": "Controllers\\NotificationController.cs",
+              "ToolTip": "D:\\Server\\MovieTheater\\MovieTheater\\Controllers\\NotificationController.cs*",
+              "RelativeToolTip": "Controllers\\NotificationController.cs*",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-18T03:03:14.897Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "TicketController.cs",
               "DocumentMoniker": "D:\\Server\\MovieTheater\\MovieTheater\\Controllers\\TicketController.cs",
               "RelativeDocumentMoniker": "Controllers\\TicketController.cs",
-              "ToolTip": "D:\\Server\\MovieTheater\\MovieTheater\\Controllers\\TicketController.cs*",
-              "RelativeToolTip": "Controllers\\TicketController.cs*",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAC0AAAAAAAAA",
+              "ToolTip": "D:\\Server\\MovieTheater\\MovieTheater\\Controllers\\TicketController.cs",
+              "RelativeToolTip": "Controllers\\TicketController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-18T00:56:28.619Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
+              "Title": "ApplicationDbContextModelSnapshot.cs",
+              "DocumentMoniker": "D:\\Server\\MovieTheater\\MovieTheater\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "RelativeDocumentMoniker": "Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "ToolTip": "D:\\Server\\MovieTheater\\MovieTheater\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "RelativeToolTip": "Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "ViewState": "AQIAAPQAAAAAAAAAAAAQwAUBAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-18T01:19:03.668Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "20241118035818_InitCreateNoti.cs",
+              "DocumentMoniker": "D:\\Server\\MovieTheater\\MovieTheater\\Migrations\\20241118035818_InitCreateNoti.cs",
+              "RelativeDocumentMoniker": "Migrations\\20241118035818_InitCreateNoti.cs",
+              "ToolTip": "D:\\Server\\MovieTheater\\MovieTheater\\Migrations\\20241118035818_InitCreateNoti.cs",
+              "RelativeToolTip": "Migrations\\20241118035818_InitCreateNoti.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-18T03:58:37.987Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "NotificationDto.cs",
+              "DocumentMoniker": "D:\\Server\\MovieTheater\\MovieTheater\\Dtos\\Notification\\NotificationDto.cs",
+              "RelativeDocumentMoniker": "Dtos\\Notification\\NotificationDto.cs",
+              "ToolTip": "D:\\Server\\MovieTheater\\MovieTheater\\Dtos\\Notification\\NotificationDto.cs",
+              "RelativeToolTip": "Dtos\\Notification\\NotificationDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-18T02:58:05.731Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Notification.cs",
+              "DocumentMoniker": "D:\\Server\\MovieTheater\\MovieTheater\\Entities\\Notification.cs",
+              "RelativeDocumentMoniker": "Entities\\Notification.cs",
+              "ToolTip": "D:\\Server\\MovieTheater\\MovieTheater\\Entities\\Notification.cs",
+              "RelativeToolTip": "Entities\\Notification.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAIwBEAAABtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-18T02:51:03.237Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "UserNotificationDto.cs",
+              "DocumentMoniker": "D:\\Server\\MovieTheater\\MovieTheater\\Dtos\\Notification\\UserNotificationDto.cs",
+              "RelativeDocumentMoniker": "Dtos\\Notification\\UserNotificationDto.cs",
+              "ToolTip": "D:\\Server\\MovieTheater\\MovieTheater\\Dtos\\Notification\\UserNotificationDto.cs",
+              "RelativeToolTip": "Dtos\\Notification\\UserNotificationDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-18T03:23:57.693Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "UserNotification.cs",
+              "DocumentMoniker": "D:\\Server\\MovieTheater\\MovieTheater\\Entities\\UserNotification.cs",
+              "RelativeDocumentMoniker": "Entities\\UserNotification.cs",
+              "ToolTip": "D:\\Server\\MovieTheater\\MovieTheater\\Entities\\UserNotification.cs",
+              "RelativeToolTip": "Entities\\UserNotification.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-18T03:22:11.219Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Server\\MovieTheater\\MovieTheater\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\Server\\MovieTheater\\MovieTheater\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAAQwEgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-18T01:02:25.236Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "D:\\Server\\MovieTheater\\MovieTheater\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "Controllers\\UserController.cs",
+              "ToolTip": "D:\\Server\\MovieTheater\\MovieTheater\\Controllers\\UserController.cs",
+              "RelativeToolTip": "Controllers\\UserController.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAIwBkAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T16:33:22.893Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "CreateNotificationDto.cs",
+              "DocumentMoniker": "D:\\Server\\MovieTheater\\MovieTheater\\Dtos\\Notification\\CreateNotificationDto.cs",
+              "RelativeDocumentMoniker": "Dtos\\Notification\\CreateNotificationDto.cs",
+              "ToolTip": "D:\\Server\\MovieTheater\\MovieTheater\\Dtos\\Notification\\CreateNotificationDto.cs",
+              "RelativeToolTip": "Dtos\\Notification\\CreateNotificationDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAABBAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-18T02:59:14.62Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "User.cs",
+              "DocumentMoniker": "D:\\Server\\MovieTheater\\MovieTheater\\Entities\\User.cs",
+              "RelativeDocumentMoniker": "Entities\\User.cs",
+              "ToolTip": "D:\\Server\\MovieTheater\\MovieTheater\\Entities\\User.cs",
+              "RelativeToolTip": "Entities\\User.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAIA5wA8AAAA4AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T16:26:31.437Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "ITicketService.cs",
+              "DocumentMoniker": "D:\\Server\\MovieTheater\\MovieTheater\\Service\\Abstract\\ITicketService.cs",
+              "RelativeDocumentMoniker": "Service\\Abstract\\ITicketService.cs",
+              "ToolTip": "D:\\Server\\MovieTheater\\MovieTheater\\Service\\Abstract\\ITicketService.cs",
+              "RelativeToolTip": "Service\\Abstract\\ITicketService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-18T00:50:53.275Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
               "Title": "TicketDto.cs",
               "DocumentMoniker": "D:\\Server\\MovieTheater\\MovieTheater\\Dtos\\Ticket\\TicketDto.cs",
               "RelativeDocumentMoniker": "Dtos\\Ticket\\TicketDto.cs",
@@ -367,51 +563,35 @@
               "RelativeToolTip": "Dtos\\Ticket\\TicketDto.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T00:45:32.772Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-18T00:45:32.772Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "TicketService.cs",
-              "DocumentMoniker": "D:\\Server\\MovieTheater\\MovieTheater\\Service\\Implement\\TicketService.cs",
-              "RelativeDocumentMoniker": "Service\\Implement\\TicketService.cs",
-              "ToolTip": "D:\\Server\\MovieTheater\\MovieTheater\\Service\\Implement\\TicketService.cs*",
-              "RelativeToolTip": "Service\\Implement\\TicketService.cs*",
-              "ViewState": "AQIAAGIAAAAAAAAAAAAgwBgAAABAAAAA",
+              "DocumentIndex": 19,
+              "Title": "TicketSeat.cs",
+              "DocumentMoniker": "D:\\Server\\MovieTheater\\MovieTheater\\Entities\\TicketSeat.cs",
+              "RelativeDocumentMoniker": "Entities\\TicketSeat.cs",
+              "ToolTip": "D:\\Server\\MovieTheater\\MovieTheater\\Entities\\TicketSeat.cs",
+              "RelativeToolTip": "Entities\\TicketSeat.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T00:51:24.429Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-18T00:37:58.093Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ITicketService.cs",
-              "DocumentMoniker": "D:\\Server\\MovieTheater\\MovieTheater\\Service\\Abstract\\ITicketService.cs",
-              "RelativeDocumentMoniker": "Service\\Abstract\\ITicketService.cs",
-              "ToolTip": "D:\\Server\\MovieTheater\\MovieTheater\\Service\\Abstract\\ITicketService.cs*",
-              "RelativeToolTip": "Service\\Abstract\\ITicketService.cs*",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
+              "DocumentIndex": 20,
+              "Title": "Ticket.cs",
+              "DocumentMoniker": "D:\\Server\\MovieTheater\\MovieTheater\\Entities\\Ticket.cs",
+              "RelativeDocumentMoniker": "Entities\\Ticket.cs",
+              "ToolTip": "D:\\Server\\MovieTheater\\MovieTheater\\Entities\\Ticket.cs",
+              "RelativeToolTip": "Entities\\Ticket.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T00:50:53.275Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-18T00:43:03.059Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "ApplicationDbContextModelSnapshot.cs",
-              "DocumentMoniker": "D:\\Server\\MovieTheater\\MovieTheater\\Migrations\\ApplicationDbContextModelSnapshot.cs",
-              "RelativeDocumentMoniker": "Migrations\\ApplicationDbContextModelSnapshot.cs",
-              "ToolTip": "D:\\Server\\MovieTheater\\MovieTheater\\Migrations\\ApplicationDbContextModelSnapshot.cs",
-              "RelativeToolTip": "Migrations\\ApplicationDbContextModelSnapshot.cs",
-              "ViewState": "AQIAACsAAAAAAAAAAAAQwDgAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T01:19:03.668Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 21,
               "Title": "20241118010827_AddUserTicketsRelationship.cs",
               "DocumentMoniker": "D:\\Server\\MovieTheater\\MovieTheater\\Migrations\\20241118010827_AddUserTicketsRelationship.cs",
               "RelativeDocumentMoniker": "Migrations\\20241118010827_AddUserTicketsRelationship.cs",
@@ -419,12 +599,11 @@
               "RelativeToolTip": "Migrations\\20241118010827_AddUserTicketsRelationship.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T01:19:00.189Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-18T01:19:00.189Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 22,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\Server\\MovieTheater\\MovieTheater\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
@@ -432,38 +611,11 @@
               "RelativeToolTip": "appsettings.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-11-13T17:09:30.599Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-13T17:09:30.599Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Server\\MovieTheater\\MovieTheater\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "D:\\Server\\MovieTheater\\MovieTheater\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAADEAAAAAAAAAAAAQwEYAAAA9AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T01:02:25.236Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "MovieController.cs",
-              "DocumentMoniker": "D:\\Server\\MovieTheater\\MovieTheater\\Controllers\\MovieController.cs",
-              "RelativeDocumentMoniker": "Controllers\\MovieController.cs",
-              "ToolTip": "D:\\Server\\MovieTheater\\MovieTheater\\Controllers\\MovieController.cs",
-              "RelativeToolTip": "Controllers\\MovieController.cs",
-              "ViewState": "AQIAADIAAAAAAAAAAAAgwDsAAAAkAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-13T18:28:06.4Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 23,
               "Title": "ShowTimeController.cs",
               "DocumentMoniker": "D:\\Server\\MovieTheater\\MovieTheater\\Controllers\\ShowTimeController.cs",
               "RelativeDocumentMoniker": "Controllers\\ShowTimeController.cs",
@@ -471,12 +623,11 @@
               "RelativeToolTip": "Controllers\\ShowTimeController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-13T18:28:54.623Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-13T18:28:54.623Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 24,
               "Title": "SeatController.cs",
               "DocumentMoniker": "D:\\Server\\MovieTheater\\MovieTheater\\Controllers\\SeatController.cs",
               "RelativeDocumentMoniker": "Controllers\\SeatController.cs",
@@ -484,12 +635,11 @@
               "RelativeToolTip": "Controllers\\SeatController.cs",
               "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T00:55:29.932Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-18T00:55:29.932Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 25,
               "Title": "SeatService.cs",
               "DocumentMoniker": "D:\\Server\\MovieTheater\\MovieTheater\\Service\\Implement\\SeatService.cs",
               "RelativeDocumentMoniker": "Service\\Implement\\SeatService.cs",
@@ -497,12 +647,11 @@
               "RelativeToolTip": "Service\\Implement\\SeatService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T00:54:41.556Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-18T00:54:41.556Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 26,
               "Title": "TicketCreateRequest.cs",
               "DocumentMoniker": "D:\\Server\\MovieTheater\\MovieTheater\\Dtos\\Ticket\\TicketCreateRequest.cs",
               "RelativeDocumentMoniker": "Dtos\\Ticket\\TicketCreateRequest.cs",
@@ -510,12 +659,11 @@
               "RelativeToolTip": "Dtos\\Ticket\\TicketCreateRequest.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T01:01:28.504Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-18T01:01:28.504Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 27,
               "Title": "ISeatService.cs",
               "DocumentMoniker": "D:\\Server\\MovieTheater\\MovieTheater\\Service\\Abstract\\ISeatService.cs",
               "RelativeDocumentMoniker": "Service\\Abstract\\ISeatService.cs",
@@ -523,12 +671,11 @@
               "RelativeToolTip": "Service\\Abstract\\ISeatService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T00:38:43.682Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-18T00:38:43.682Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 28,
               "Title": "SeatDto.cs",
               "DocumentMoniker": "D:\\Server\\MovieTheater\\MovieTheater\\Dtos\\Seat\\SeatDto.cs",
               "RelativeDocumentMoniker": "Dtos\\Seat\\SeatDto.cs",
@@ -536,12 +683,11 @@
               "RelativeToolTip": "Dtos\\Seat\\SeatDto.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T00:40:33.166Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-18T00:40:33.166Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 29,
               "Title": "Seat.cs",
               "DocumentMoniker": "D:\\Server\\MovieTheater\\MovieTheater\\Entities\\Seat.cs",
               "RelativeDocumentMoniker": "Entities\\Seat.cs",
@@ -549,12 +695,11 @@
               "RelativeToolTip": "Entities\\Seat.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T00:24:16.022Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-18T00:24:16.022Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 30,
               "Title": "IMovieService.cs",
               "DocumentMoniker": "D:\\Server\\MovieTheater\\MovieTheater\\Service\\Abstract\\IMovieService.cs",
               "RelativeDocumentMoniker": "Service\\Abstract\\IMovieService.cs",
@@ -562,12 +707,11 @@
               "RelativeToolTip": "Service\\Abstract\\IMovieService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAABEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-13T16:38:22.087Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-13T16:38:22.087Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 31,
               "Title": "ShowTime.cs",
               "DocumentMoniker": "D:\\Server\\MovieTheater\\MovieTheater\\Entities\\ShowTime.cs",
               "RelativeDocumentMoniker": "Entities\\ShowTime.cs",
@@ -575,12 +719,11 @@
               "RelativeToolTip": "Entities\\ShowTime.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T00:42:26.517Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-18T00:42:26.517Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 32,
               "Title": "CinemaRoom.cs",
               "DocumentMoniker": "D:\\Server\\MovieTheater\\MovieTheater\\Entities\\CinemaRoom.cs",
               "RelativeDocumentMoniker": "Entities\\CinemaRoom.cs",
@@ -588,25 +731,11 @@
               "RelativeToolTip": "Entities\\CinemaRoom.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-14T01:18:55.886Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-14T01:18:55.886Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "D:\\Server\\MovieTheater\\MovieTheater\\Controllers\\UserController.cs",
-              "RelativeDocumentMoniker": "Controllers\\UserController.cs",
-              "ToolTip": "D:\\Server\\MovieTheater\\MovieTheater\\Controllers\\UserController.cs",
-              "RelativeToolTip": "Controllers\\UserController.cs",
-              "ViewState": "AQIAAC8AAAAAAAAAAAAgwE4AAAAZAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-13T16:33:22.893Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 33,
               "Title": "20241114012024_AddCommentsTable.cs",
               "DocumentMoniker": "D:\\Server\\MovieTheater\\MovieTheater\\Migrations\\20241114012024_AddCommentsTable.cs",
               "RelativeDocumentMoniker": "Migrations\\20241114012024_AddCommentsTable.cs",
@@ -618,7 +747,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 34,
               "Title": "Comment.cs",
               "DocumentMoniker": "D:\\Server\\MovieTheater\\MovieTheater\\Entities\\Comment.cs",
               "RelativeDocumentMoniker": "Entities\\Comment.cs",
@@ -630,7 +759,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 35,
               "Title": "Actor.cs",
               "DocumentMoniker": "D:\\Server\\MovieTheater\\MovieTheater\\Entities\\Actor.cs",
               "RelativeDocumentMoniker": "Entities\\Actor.cs",
@@ -642,7 +771,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 36,
               "Title": "ActorController.cs",
               "DocumentMoniker": "D:\\Server\\MovieTheater\\MovieTheater\\Controllers\\ActorController.cs",
               "RelativeDocumentMoniker": "Controllers\\ActorController.cs",
@@ -654,7 +783,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 37,
               "Title": "CommentController.cs",
               "DocumentMoniker": "D:\\Server\\MovieTheater\\MovieTheater\\Controllers\\CommentController.cs",
               "RelativeDocumentMoniker": "Controllers\\CommentController.cs",
@@ -666,7 +795,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 38,
               "Title": "CommentService.cs",
               "DocumentMoniker": "D:\\Server\\MovieTheater\\MovieTheater\\Service\\Implement\\CommentService.cs",
               "RelativeDocumentMoniker": "Service\\Implement\\CommentService.cs",
@@ -678,7 +807,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 39,
               "Title": "ICommentService.cs",
               "DocumentMoniker": "D:\\Server\\MovieTheater\\MovieTheater\\Service\\Abstract\\ICommentService.cs",
               "RelativeDocumentMoniker": "Service\\Abstract\\ICommentService.cs",
@@ -690,7 +819,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 40,
               "Title": "UpdateCommentDto.cs",
               "DocumentMoniker": "D:\\Server\\MovieTheater\\MovieTheater\\Dtos\\Comment\\UpdateCommentDto.cs",
               "RelativeDocumentMoniker": "Dtos\\Comment\\UpdateCommentDto.cs",
@@ -702,7 +831,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 41,
               "Title": "CreateCommentDto.cs",
               "DocumentMoniker": "D:\\Server\\MovieTheater\\MovieTheater\\Dtos\\Comment\\CreateCommentDto.cs",
               "RelativeDocumentMoniker": "Dtos\\Comment\\CreateCommentDto.cs",
@@ -714,7 +843,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 42,
               "Title": "CommentDto.cs",
               "DocumentMoniker": "D:\\Server\\MovieTheater\\MovieTheater\\Dtos\\Comment\\CommentDto.cs",
               "RelativeDocumentMoniker": "Dtos\\Comment\\CommentDto.cs",
@@ -726,7 +855,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 43,
               "Title": "Movie.cs",
               "DocumentMoniker": "D:\\Server\\MovieTheater\\MovieTheater\\Entities\\Movie.cs",
               "RelativeDocumentMoniker": "Entities\\Movie.cs",
@@ -738,7 +867,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 44,
               "Title": "IRoleService.cs",
               "DocumentMoniker": "D:\\Server\\MovieTheater\\MovieTheater\\Service\\Abstract\\IRoleService.cs",
               "RelativeDocumentMoniker": "Service\\Abstract\\IRoleService.cs",
@@ -750,7 +879,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 45,
               "Title": "MovieService.cs",
               "DocumentMoniker": "D:\\Server\\MovieTheater\\MovieTheater\\Service\\Implement\\MovieService.cs",
               "RelativeDocumentMoniker": "Service\\Implement\\MovieService.cs",
@@ -762,7 +891,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 46,
               "Title": "MovieDto.cs",
               "DocumentMoniker": "D:\\Server\\MovieTheater\\MovieTheater\\Dtos\\Movie\\MovieDto.cs",
               "RelativeDocumentMoniker": "Dtos\\Movie\\MovieDto.cs",
@@ -774,7 +903,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 47,
               "Title": "CreateMovieDto.cs",
               "DocumentMoniker": "D:\\Server\\MovieTheater\\MovieTheater\\Dtos\\Movie\\CreateMovieDto.cs",
               "RelativeDocumentMoniker": "Dtos\\Movie\\CreateMovieDto.cs",
@@ -786,7 +915,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 48,
               "Title": "RoleController.cs",
               "DocumentMoniker": "D:\\Server\\MovieTheater\\MovieTheater\\Controllers\\RoleController.cs",
               "RelativeDocumentMoniker": "Controllers\\RoleController.cs",
@@ -798,7 +927,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 49,
               "Title": "AuthenticationService.cs",
               "DocumentMoniker": "D:\\Server\\MovieTheater\\MovieTheater\\Service\\Implement\\AuthenticationService.cs",
               "RelativeDocumentMoniker": "Service\\Implement\\AuthenticationService.cs",
@@ -810,7 +939,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 50,
               "Title": "UserService.cs",
               "DocumentMoniker": "D:\\Server\\MovieTheater\\MovieTheater\\Service\\Implement\\UserService.cs",
               "RelativeDocumentMoniker": "Service\\Implement\\UserService.cs",
@@ -822,7 +951,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 51,
               "Title": "IUserService.cs",
               "DocumentMoniker": "D:\\Server\\MovieTheater\\MovieTheater\\Service\\Abstract\\IUserService.cs",
               "RelativeDocumentMoniker": "Service\\Abstract\\IUserService.cs",
@@ -834,7 +963,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 52,
               "Title": "GenreController.cs",
               "DocumentMoniker": "D:\\Server\\MovieTheater\\MovieTheater\\Controllers\\GenreController.cs",
               "RelativeDocumentMoniker": "Controllers\\GenreController.cs",
@@ -846,7 +975,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 53,
               "Title": "DirectorController.cs",
               "DocumentMoniker": "D:\\Server\\MovieTheater\\MovieTheater\\Controllers\\DirectorController.cs",
               "RelativeDocumentMoniker": "Controllers\\DirectorController.cs",
@@ -858,7 +987,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 54,
               "Title": "CinemaRoomController.cs",
               "DocumentMoniker": "D:\\Server\\MovieTheater\\MovieTheater\\Controllers\\CinemaRoomController.cs",
               "RelativeDocumentMoniker": "Controllers\\CinemaRoomController.cs",
@@ -870,7 +999,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 55,
               "Title": "CinemaController.cs",
               "DocumentMoniker": "D:\\Server\\MovieTheater\\MovieTheater\\Controllers\\CinemaController.cs",
               "RelativeDocumentMoniker": "Controllers\\CinemaController.cs",
@@ -882,7 +1011,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 56,
               "Title": "AuthController.cs",
               "DocumentMoniker": "D:\\Server\\MovieTheater\\MovieTheater\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
@@ -894,7 +1023,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 57,
               "Title": "RoleService.cs",
               "DocumentMoniker": "D:\\Server\\MovieTheater\\MovieTheater\\Service\\Implement\\RoleService.cs",
               "RelativeDocumentMoniker": "Service\\Implement\\RoleService.cs",
@@ -906,7 +1035,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 58,
               "Title": "ShowTimeService.cs",
               "DocumentMoniker": "D:\\Server\\MovieTheater\\MovieTheater\\Service\\Implement\\ShowTimeService.cs",
               "RelativeDocumentMoniker": "Service\\Implement\\ShowTimeService.cs",
@@ -918,7 +1047,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 59,
               "Title": "DirectorService.cs",
               "DocumentMoniker": "D:\\Server\\MovieTheater\\MovieTheater\\Service\\Implement\\DirectorService.cs",
               "RelativeDocumentMoniker": "Service\\Implement\\DirectorService.cs",
@@ -930,7 +1059,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 60,
               "Title": "CinemaService.cs",
               "DocumentMoniker": "D:\\Server\\MovieTheater\\MovieTheater\\Service\\Implement\\CinemaService.cs",
               "RelativeDocumentMoniker": "Service\\Implement\\CinemaService.cs",
@@ -942,7 +1071,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
+              "DocumentIndex": 61,
               "Title": "CinemaRoomService.cs",
               "DocumentMoniker": "D:\\Server\\MovieTheater\\MovieTheater\\Service\\Implement\\CinemaRoomService.cs",
               "RelativeDocumentMoniker": "Service\\Implement\\CinemaRoomService.cs",
@@ -954,7 +1083,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
+              "DocumentIndex": 62,
               "Title": "ActorService.cs",
               "DocumentMoniker": "D:\\Server\\MovieTheater\\MovieTheater\\Service\\Implement\\ActorService.cs",
               "RelativeDocumentMoniker": "Service\\Implement\\ActorService.cs",
@@ -966,7 +1095,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 54,
+              "DocumentIndex": 63,
               "Title": "IShowTimeService.cs",
               "DocumentMoniker": "D:\\Server\\MovieTheater\\MovieTheater\\Service\\Abstract\\IShowTimeService.cs",
               "RelativeDocumentMoniker": "Service\\Abstract\\IShowTimeService.cs",
@@ -978,7 +1107,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 55,
+              "DocumentIndex": 64,
               "Title": "IGenreService.cs",
               "DocumentMoniker": "D:\\Server\\MovieTheater\\MovieTheater\\Service\\Abstract\\IGenreService.cs",
               "RelativeDocumentMoniker": "Service\\Abstract\\IGenreService.cs",
@@ -990,7 +1119,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 56,
+              "DocumentIndex": 65,
               "Title": "IDirectorService.cs",
               "DocumentMoniker": "D:\\Server\\MovieTheater\\MovieTheater\\Service\\Abstract\\IDirectorService.cs",
               "RelativeDocumentMoniker": "Service\\Abstract\\IDirectorService.cs",
@@ -1002,7 +1131,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 57,
+              "DocumentIndex": 66,
               "Title": "ICinemaService.cs",
               "DocumentMoniker": "D:\\Server\\MovieTheater\\MovieTheater\\Service\\Abstract\\ICinemaService.cs",
               "RelativeDocumentMoniker": "Service\\Abstract\\ICinemaService.cs",
@@ -1014,7 +1143,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 58,
+              "DocumentIndex": 67,
               "Title": "ICinemaRoomService.cs",
               "DocumentMoniker": "D:\\Server\\MovieTheater\\MovieTheater\\Service\\Abstract\\ICinemaRoomService.cs",
               "RelativeDocumentMoniker": "Service\\Abstract\\ICinemaRoomService.cs",
@@ -1026,7 +1155,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 59,
+              "DocumentIndex": 68,
               "Title": "IActorService.cs",
               "DocumentMoniker": "D:\\Server\\MovieTheater\\MovieTheater\\Service\\Abstract\\IActorService.cs",
               "RelativeDocumentMoniker": "Service\\Abstract\\IActorService.cs",
@@ -1038,7 +1167,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 60,
+              "DocumentIndex": 69,
               "Title": "UpdatePasswordDto.cs",
               "DocumentMoniker": "D:\\Server\\MovieTheater\\MovieTheater\\Dtos\\User\\UpdatePasswordDto.cs",
               "RelativeDocumentMoniker": "Dtos\\User\\UpdatePasswordDto.cs",
@@ -1050,7 +1179,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 61,
+              "DocumentIndex": 70,
               "Title": "UpdateUserDto.cs",
               "DocumentMoniker": "D:\\Server\\MovieTheater\\MovieTheater\\Dtos\\User\\UpdateUserDto.cs",
               "RelativeDocumentMoniker": "Dtos\\User\\UpdateUserDto.cs",
@@ -1062,7 +1191,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 62,
+              "DocumentIndex": 71,
               "Title": "UserDto.cs",
               "DocumentMoniker": "D:\\Server\\MovieTheater\\MovieTheater\\Dtos\\User\\UserDto.cs",
               "RelativeDocumentMoniker": "Dtos\\User\\UserDto.cs",
@@ -1074,7 +1203,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 63,
+              "DocumentIndex": 72,
               "Title": "UpdateRoleDto.cs",
               "DocumentMoniker": "D:\\Server\\MovieTheater\\MovieTheater\\Dtos\\Role\\UpdateRoleDto.cs",
               "RelativeDocumentMoniker": "Dtos\\Role\\UpdateRoleDto.cs",
@@ -1086,7 +1215,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 64,
+              "DocumentIndex": 73,
               "Title": "CreateRoleDto.cs",
               "DocumentMoniker": "D:\\Server\\MovieTheater\\MovieTheater\\Dtos\\Role\\CreateRoleDto.cs",
               "RelativeDocumentMoniker": "Dtos\\Role\\CreateRoleDto.cs",
@@ -1098,7 +1227,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 65,
+              "DocumentIndex": 74,
               "Title": "RoleDto.cs",
               "DocumentMoniker": "D:\\Server\\MovieTheater\\MovieTheater\\Dtos\\Role\\RoleDto.cs",
               "RelativeDocumentMoniker": "Dtos\\Role\\RoleDto.cs",
@@ -1110,7 +1239,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 66,
+              "DocumentIndex": 75,
               "Title": "CreateUserDto.cs",
               "DocumentMoniker": "D:\\Server\\MovieTheater\\MovieTheater\\Dtos\\User\\CreateUserDto.cs",
               "RelativeDocumentMoniker": "Dtos\\User\\CreateUserDto.cs",
@@ -1122,7 +1251,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 67,
+              "DocumentIndex": 76,
               "Title": "LoginDto.cs",
               "DocumentMoniker": "D:\\Server\\MovieTheater\\MovieTheater\\Dtos\\Auth\\LoginDto.cs",
               "RelativeDocumentMoniker": "Dtos\\Auth\\LoginDto.cs",
@@ -1134,7 +1263,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 68,
+              "DocumentIndex": 77,
               "Title": "Role.cs",
               "DocumentMoniker": "D:\\Server\\MovieTheater\\MovieTheater\\Entities\\Role.cs",
               "RelativeDocumentMoniker": "Entities\\Role.cs",

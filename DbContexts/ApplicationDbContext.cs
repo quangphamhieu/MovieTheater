@@ -23,6 +23,8 @@ namespace MovieTheater.DbContexts
         public DbSet<Seat> Seats { get; set; }
         public DbSet<Ticket> Tickets { get; set; }
         public DbSet<TicketSeat> TicketSeats { get; set; }
+        public DbSet<Notification> Notifications { get; set; }
+        public DbSet<UserNotification> UserNotifications { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -114,7 +116,20 @@ namespace MovieTheater.DbContexts
                 .HasOne(t => t.User)
                 .WithMany(u => u.Tickets)
                 .HasForeignKey(t => t.UserId)
-                .OnDelete(DeleteBehavior.NoAction);  // Đặt hành động xóa là NoAction cho User
+                .OnDelete(DeleteBehavior.NoAction);
+
+            modelBuilder.Entity<UserNotification>()
+           .HasKey(un => new { un.UserId, un.NotificationId });
+
+            modelBuilder.Entity<UserNotification>()
+                .HasOne(un => un.User)
+                .WithMany()
+                .HasForeignKey(un => un.UserId);
+
+            modelBuilder.Entity<UserNotification>()
+                .HasOne(un => un.Notification)
+                .WithMany()
+                .HasForeignKey(un => un.NotificationId);
 
             var adminRole = new Role { Id = 1, RoleName = "Admin" };
             var customerRole = new Role { Id = 2, RoleName = "Customer" };
