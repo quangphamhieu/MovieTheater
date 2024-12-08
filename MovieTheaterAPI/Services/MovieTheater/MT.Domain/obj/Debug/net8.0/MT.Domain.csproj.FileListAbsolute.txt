@@ -1,0 +1,17 @@
+D:\Server\MovieTheaterAPI\Services\MovieTheater\MT.Domain\bin\Debug\net8.0\MT.Domain.deps.json
+D:\Server\MovieTheaterAPI\Services\MovieTheater\MT.Domain\bin\Debug\net8.0\MT.Domain.runtimeconfig.json
+D:\Server\MovieTheaterAPI\Services\MovieTheater\MT.Domain\bin\Debug\net8.0\MT.Domain.dll
+D:\Server\MovieTheaterAPI\Services\MovieTheater\MT.Domain\bin\Debug\net8.0\MT.Domain.pdb
+D:\Server\MovieTheaterAPI\Services\MovieTheater\MT.Domain\bin\Debug\net8.0\MT.Shared.Constant.dll
+D:\Server\MovieTheaterAPI\Services\MovieTheater\MT.Domain\bin\Debug\net8.0\MT.Shared.Constant.pdb
+D:\Server\MovieTheaterAPI\Services\MovieTheater\MT.Domain\obj\Debug\net8.0\MT.Domain.csproj.AssemblyReference.cache
+D:\Server\MovieTheaterAPI\Services\MovieTheater\MT.Domain\obj\Debug\net8.0\MT.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Server\MovieTheaterAPI\Services\MovieTheater\MT.Domain\obj\Debug\net8.0\MT.Domain.AssemblyInfoInputs.cache
+D:\Server\MovieTheaterAPI\Services\MovieTheater\MT.Domain\obj\Debug\net8.0\MT.Domain.AssemblyInfo.cs
+D:\Server\MovieTheaterAPI\Services\MovieTheater\MT.Domain\obj\Debug\net8.0\MT.Domain.csproj.CoreCompileInputs.cache
+D:\Server\MovieTheaterAPI\Services\MovieTheater\MT.Domain\obj\Debug\net8.0\MT.Domain.csproj.Up2Date
+D:\Server\MovieTheaterAPI\Services\MovieTheater\MT.Domain\obj\Debug\net8.0\MT.Domain.dll
+D:\Server\MovieTheaterAPI\Services\MovieTheater\MT.Domain\obj\Debug\net8.0\refint\MT.Domain.dll
+D:\Server\MovieTheaterAPI\Services\MovieTheater\MT.Domain\obj\Debug\net8.0\MT.Domain.pdb
+D:\Server\MovieTheaterAPI\Services\MovieTheater\MT.Domain\obj\Debug\net8.0\MT.Domain.genruntimeconfig.cache
+D:\Server\MovieTheaterAPI\Services\MovieTheater\MT.Domain\obj\Debug\net8.0\ref\MT.Domain.dll

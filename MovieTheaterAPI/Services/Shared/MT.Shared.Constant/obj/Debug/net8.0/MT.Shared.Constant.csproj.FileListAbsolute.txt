@@ -1,0 +1,14 @@
+D:\Server\MovieTheaterAPI\Services\Shared\MT.Shared.Constant\bin\Debug\net8.0\MT.Shared.Constant.deps.json
+D:\Server\MovieTheaterAPI\Services\Shared\MT.Shared.Constant\bin\Debug\net8.0\MT.Shared.Constant.runtimeconfig.json
+D:\Server\MovieTheaterAPI\Services\Shared\MT.Shared.Constant\bin\Debug\net8.0\MT.Shared.Constant.dll
+D:\Server\MovieTheaterAPI\Services\Shared\MT.Shared.Constant\bin\Debug\net8.0\MT.Shared.Constant.pdb
+D:\Server\MovieTheaterAPI\Services\Shared\MT.Shared.Constant\obj\Debug\net8.0\MT.Shared.Constant.csproj.AssemblyReference.cache
+D:\Server\MovieTheaterAPI\Services\Shared\MT.Shared.Constant\obj\Debug\net8.0\MT.Shared.Constant.GeneratedMSBuildEditorConfig.editorconfig
+D:\Server\MovieTheaterAPI\Services\Shared\MT.Shared.Constant\obj\Debug\net8.0\MT.Shared.Constant.AssemblyInfoInputs.cache
+D:\Server\MovieTheaterAPI\Services\Shared\MT.Shared.Constant\obj\Debug\net8.0\MT.Shared.Constant.AssemblyInfo.cs
+D:\Server\MovieTheaterAPI\Services\Shared\MT.Shared.Constant\obj\Debug\net8.0\MT.Shared.Constant.csproj.CoreCompileInputs.cache
+D:\Server\MovieTheaterAPI\Services\Shared\MT.Shared.Constant\obj\Debug\net8.0\MT.Shared.Constant.dll
+D:\Server\MovieTheaterAPI\Services\Shared\MT.Shared.Constant\obj\Debug\net8.0\refint\MT.Shared.Constant.dll
+D:\Server\MovieTheaterAPI\Services\Shared\MT.Shared.Constant\obj\Debug\net8.0\MT.Shared.Constant.pdb
+D:\Server\MovieTheaterAPI\Services\Shared\MT.Shared.Constant\obj\Debug\net8.0\MT.Shared.Constant.genruntimeconfig.cache
+D:\Server\MovieTheaterAPI\Services\Shared\MT.Shared.Constant\obj\Debug\net8.0\ref\MT.Shared.Constant.dll
