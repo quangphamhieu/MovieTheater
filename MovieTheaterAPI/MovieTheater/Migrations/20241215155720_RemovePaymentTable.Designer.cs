@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MovieTheater.Migrations
 {
     [DbContext(typeof(MovieTheaterDbContext))]
-    [Migration("20241128210112_Init")]
-    partial class Init
+    [Migration("20241215155720_RemovePaymentTable")]
+    partial class RemovePaymentTable
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -267,42 +267,6 @@ namespace MovieTheater.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Notification", "theater");
-                });
-
-            modelBuilder.Entity("MT.Domain.Payment", b =>
-                {
-                    b.Property<long>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
-
-                    b.Property<decimal>("Amount")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.Property<DateTime>("PaymentDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("PaymentMethod")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Status")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("TicketId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("TransactionId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("TicketId");
-
-                    b.ToTable("Payment", "theater");
                 });
 
             modelBuilder.Entity("MT.Domain.Role", b =>
@@ -626,17 +590,6 @@ namespace MovieTheater.Migrations
                     b.Navigation("Genre");
 
                     b.Navigation("Movie");
-                });
-
-            modelBuilder.Entity("MT.Domain.Payment", b =>
-                {
-                    b.HasOne("MT.Domain.Ticket", "Ticket")
-                        .WithMany()
-                        .HasForeignKey("TicketId")
-                        .OnDelete(DeleteBehavior.NoAction)
-                        .IsRequired();
-
-                    b.Navigation("Ticket");
                 });
 
             modelBuilder.Entity("MT.Domain.Seat", b =>

@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace MovieTheater.Migrations
 {
     /// <inheritdoc />
-    public partial class Init : Migration
+    public partial class RemovePaymentTable : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -389,31 +389,6 @@ namespace MovieTheater.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Payment",
-                schema: "theater",
-                columns: table => new
-                {
-                    Id = table.Column<long>(type: "bigint", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    TicketId = table.Column<int>(type: "int", nullable: false),
-                    Amount = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    Status = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    PaymentDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    PaymentMethod = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    TransactionId = table.Column<string>(type: "nvarchar(max)", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Payment", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_Payment_Ticket_TicketId",
-                        column: x => x.TicketId,
-                        principalSchema: "theater",
-                        principalTable: "Ticket",
-                        principalColumn: "Id");
-                });
-
-            migrationBuilder.CreateTable(
                 name: "TicketSeat",
                 schema: "theater",
                 columns: table => new
@@ -494,12 +469,6 @@ namespace MovieTheater.Migrations
                 column: "GenreId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Payment_TicketId",
-                schema: "theater",
-                table: "Payment",
-                column: "TicketId");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_Seat_CinemaRoomId",
                 schema: "theater",
                 table: "Seat",
@@ -567,10 +536,6 @@ namespace MovieTheater.Migrations
 
             migrationBuilder.DropTable(
                 name: "MovieGenre",
-                schema: "theater");
-
-            migrationBuilder.DropTable(
-                name: "Payment",
                 schema: "theater");
 
             migrationBuilder.DropTable(

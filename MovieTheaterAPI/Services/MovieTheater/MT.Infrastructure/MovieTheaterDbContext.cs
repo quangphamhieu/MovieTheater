@@ -30,7 +30,6 @@ namespace MT.Infrastructure
         public DbSet<TicketSeat> TicketSeats { get; set; }
         public DbSet<Notification> Notifications { get; set; }
         public DbSet<UserNotification> UserNotifications { get; set; }
-        public DbSet<Payment> Payments { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -137,11 +136,6 @@ namespace MT.Infrastructure
                 .WithMany()
                 .HasForeignKey(un => un.NotificationId);
 
-            modelBuilder.Entity<Payment>()
-                .HasOne(p => p.Ticket)
-                .WithMany()  // Một Payment chỉ thuộc về một Ticket
-                .HasForeignKey(p => p.TicketId)
-                .OnDelete(DeleteBehavior.NoAction);  // Không xóa Payment khi Ticket bị xóa
 
 
             var adminRole = new Role { Id = 1, RoleName = "Admin" };
