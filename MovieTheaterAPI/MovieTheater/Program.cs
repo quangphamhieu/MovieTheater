@@ -92,6 +92,8 @@ namespace MovieTheater
             }
 
             app.UseHttpsRedirection();
+            // Thêm dòng này để phục vụ file tĩnh từ wwwroot
+            app.UseStaticFiles();
             app.UseAuthentication();
             app.UseAuthorization();
 

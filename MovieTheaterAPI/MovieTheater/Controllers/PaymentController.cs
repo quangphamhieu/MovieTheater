@@ -15,9 +15,8 @@ namespace MovieTheater.Controllers
             _vietQrService = vietQrService;
         }
 
-        // API tạo mã QR thanh toán
-        [HttpGet("{ticketId}/generate-qr")]
-        public async Task<IActionResult> GenerateQr(int ticketId)
+        [HttpGet("{ticketId}/generate-payment-qr")]
+        public async Task<IActionResult> GeneratePaymentQr(int ticketId)
         {
             try
             {
@@ -30,22 +29,18 @@ namespace MovieTheater.Controllers
             }
         }
 
-        [HttpPost("{ticketId}/verify")]
-        public async Task<IActionResult> VerifyPayment(int ticketId)
+        [HttpPost("{ticketId}/send-email")]
+        public async Task<IActionResult> SendEmail(int ticketId)
         {
             try
             {
-                var result = await _vietQrService.VerifyPaymentAsync(ticketId);
-                if (result)
-                    return Ok(new { message = "Payment verified successfully." });
-                return BadRequest(new { message = "Payment not verified or pending." });
+                await _vietQrService.SendPaymentSuccessEmailAsync(ticketId);
+                return Ok(new { message = "Email sent successfully." });
             }
             catch (Exception ex)
             {
                 return BadRequest(new { message = ex.Message });
             }
         }
-
     }
-
 }

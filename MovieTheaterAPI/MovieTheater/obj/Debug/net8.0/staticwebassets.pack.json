@@ -1,0 +1,33 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\Server\\MovieTheater\\MovieTheater\\MovieTheaterAPI\\MovieTheater\\wwwroot\\qrcodes\\ticket_1.png",
+      "PackagePath": "staticwebassets\\qrcodes\\ticket_1.png"
+    },
+    {
+      "Id": "D:\\Server\\MovieTheater\\MovieTheater\\MovieTheaterAPI\\MovieTheater\\wwwroot\\qrcodes\\ticket_2.png",
+      "PackagePath": "staticwebassets\\qrcodes\\ticket_2.png"
+    },
+    {
+      "Id": "D:\\Server\\MovieTheater\\MovieTheater\\MovieTheaterAPI\\MovieTheater\\wwwroot\\qrcodes\\ticket_3.png",
+      "PackagePath": "staticwebassets\\qrcodes\\ticket_3.png"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.MovieTheater.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.MovieTheater.props",
+      "PackagePath": "build\\MovieTheater.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.MovieTheater.props",
+      "PackagePath": "buildMultiTargeting\\MovieTheater.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.MovieTheater.props",
+      "PackagePath": "buildTransitive\\MovieTheater.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

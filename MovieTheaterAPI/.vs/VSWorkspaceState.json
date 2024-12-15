@@ -1,0 +1,12 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Services",
+    "\\Services\\MovieTheater",
+    "\\Services\\MovieTheater\\MT.Applicationservices",
+    "\\Services\\MovieTheater\\MT.Applicationservices\\Module",
+    "\\Services\\MovieTheater\\MT.Applicationservices\\Module\\Implements"
+  ],
+  "SelectedNode": "\\Services\\MovieTheater\\MT.Applicationservices\\Module\\Implements\\PaymentService.cs",
+  "PreviewInSolutionExplorer": false
+}

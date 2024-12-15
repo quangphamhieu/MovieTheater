@@ -31,6 +31,7 @@ namespace MT.Applicationservices.Module.Implements
             message.Subject = subject;
 
             var builder = new BodyBuilder { HtmlBody = htmlMessage };
+
             message.Body = builder.ToMessageBody();
 
             using var smtp = new MailKit.Net.Smtp.SmtpClient();

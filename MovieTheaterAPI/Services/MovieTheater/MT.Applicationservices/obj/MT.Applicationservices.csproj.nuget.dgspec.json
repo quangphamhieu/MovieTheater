@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Server\\MovieTheaterAPI\\Services\\MovieTheater\\MT.Applicationservices\\MT.Applicationservices.csproj": {}
+    "D:\\Server\\MovieTheater\\MovieTheater\\MovieTheaterAPI\\Services\\MovieTheater\\MT.Applicationservices\\MT.Applicationservices.csproj": {}
   },
   "projects": {
-    "D:\\Server\\MovieTheaterAPI\\Services\\MovieTheater\\MT.Applicationservices\\MT.Applicationservices.csproj": {
+    "D:\\Server\\MovieTheater\\MovieTheater\\MovieTheaterAPI\\Services\\MovieTheater\\MT.Applicationservices\\MT.Applicationservices.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Server\\MovieTheaterAPI\\Services\\MovieTheater\\MT.Applicationservices\\MT.Applicationservices.csproj",
+        "projectUniqueName": "D:\\Server\\MovieTheater\\MovieTheater\\MovieTheaterAPI\\Services\\MovieTheater\\MT.Applicationservices\\MT.Applicationservices.csproj",
         "projectName": "MT.Applicationservices",
-        "projectPath": "D:\\Server\\MovieTheaterAPI\\Services\\MovieTheater\\MT.Applicationservices\\MT.Applicationservices.csproj",
+        "projectPath": "D:\\Server\\MovieTheater\\MovieTheater\\MovieTheaterAPI\\Services\\MovieTheater\\MT.Applicationservices\\MT.Applicationservices.csproj",
         "packagesPath": "C:\\Users\\hieub\\.nuget\\packages\\",
-        "outputPath": "D:\\Server\\MovieTheaterAPI\\Services\\MovieTheater\\MT.Applicationservices\\obj\\",
+        "outputPath": "D:\\Server\\MovieTheater\\MovieTheater\\MovieTheaterAPI\\Services\\MovieTheater\\MT.Applicationservices\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -33,14 +33,14 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\Server\\MovieTheaterAPI\\Services\\MovieTheater\\MT.Dtos\\MT.Dtos.csproj": {
-                "projectPath": "D:\\Server\\MovieTheaterAPI\\Services\\MovieTheater\\MT.Dtos\\MT.Dtos.csproj"
+              "D:\\Server\\MovieTheater\\MovieTheater\\MovieTheaterAPI\\Services\\MovieTheater\\MT.Dtos\\MT.Dtos.csproj": {
+                "projectPath": "D:\\Server\\MovieTheater\\MovieTheater\\MovieTheaterAPI\\Services\\MovieTheater\\MT.Dtos\\MT.Dtos.csproj"
               },
-              "D:\\Server\\MovieTheaterAPI\\Services\\MovieTheater\\MT.Infrastructure\\MT.Infrastructure.csproj": {
-                "projectPath": "D:\\Server\\MovieTheaterAPI\\Services\\MovieTheater\\MT.Infrastructure\\MT.Infrastructure.csproj"
+              "D:\\Server\\MovieTheater\\MovieTheater\\MovieTheaterAPI\\Services\\MovieTheater\\MT.Infrastructure\\MT.Infrastructure.csproj": {
+                "projectPath": "D:\\Server\\MovieTheater\\MovieTheater\\MovieTheaterAPI\\Services\\MovieTheater\\MT.Infrastructure\\MT.Infrastructure.csproj"
               },
-              "D:\\Server\\MovieTheaterAPI\\Services\\Shared\\MT.Shared.Constant\\MT.Shared.Constant.csproj": {
-                "projectPath": "D:\\Server\\MovieTheaterAPI\\Services\\Shared\\MT.Shared.Constant\\MT.Shared.Constant.csproj"
+              "D:\\Server\\MovieTheater\\MovieTheater\\MovieTheaterAPI\\Services\\Shared\\MT.Shared.Constant\\MT.Shared.Constant.csproj": {
+                "projectPath": "D:\\Server\\MovieTheater\\MovieTheater\\MovieTheaterAPI\\Services\\Shared\\MT.Shared.Constant\\MT.Shared.Constant.csproj"
               }
             }
           }
@@ -89,6 +89,10 @@
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.3, )"
+            },
+            "QRCoder": {
+              "target": "Package",
+              "version": "[1.6.0, )"
             },
             "RestSharp": {
               "target": "Package",
@@ -126,14 +130,14 @@
         }
       }
     },
-    "D:\\Server\\MovieTheaterAPI\\Services\\MovieTheater\\MT.Domain\\MT.Domain.csproj": {
+    "D:\\Server\\MovieTheater\\MovieTheater\\MovieTheaterAPI\\Services\\MovieTheater\\MT.Domain\\MT.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Server\\MovieTheaterAPI\\Services\\MovieTheater\\MT.Domain\\MT.Domain.csproj",
+        "projectUniqueName": "D:\\Server\\MovieTheater\\MovieTheater\\MovieTheaterAPI\\Services\\MovieTheater\\MT.Domain\\MT.Domain.csproj",
         "projectName": "MT.Domain",
-        "projectPath": "D:\\Server\\MovieTheaterAPI\\Services\\MovieTheater\\MT.Domain\\MT.Domain.csproj",
+        "projectPath": "D:\\Server\\MovieTheater\\MovieTheater\\MovieTheaterAPI\\Services\\MovieTheater\\MT.Domain\\MT.Domain.csproj",
         "packagesPath": "C:\\Users\\hieub\\.nuget\\packages\\",
-        "outputPath": "D:\\Server\\MovieTheaterAPI\\Services\\MovieTheater\\MT.Domain\\obj\\",
+        "outputPath": "D:\\Server\\MovieTheater\\MovieTheater\\MovieTheaterAPI\\Services\\MovieTheater\\MT.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -155,8 +159,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\Server\\MovieTheaterAPI\\Services\\Shared\\MT.Shared.Constant\\MT.Shared.Constant.csproj": {
-                "projectPath": "D:\\Server\\MovieTheaterAPI\\Services\\Shared\\MT.Shared.Constant\\MT.Shared.Constant.csproj"
+              "D:\\Server\\MovieTheater\\MovieTheater\\MovieTheaterAPI\\Services\\Shared\\MT.Shared.Constant\\MT.Shared.Constant.csproj": {
+                "projectPath": "D:\\Server\\MovieTheater\\MovieTheater\\MovieTheaterAPI\\Services\\Shared\\MT.Shared.Constant\\MT.Shared.Constant.csproj"
               }
             }
           }
@@ -206,6 +210,10 @@
               "target": "Package",
               "version": "[13.0.3, )"
             },
+            "QRCoder": {
+              "target": "Package",
+              "version": "[1.6.0, )"
+            },
             "RestSharp": {
               "target": "Package",
               "version": "[112.1.0, )"
@@ -239,14 +247,14 @@
         }
       }
     },
-    "D:\\Server\\MovieTheaterAPI\\Services\\MovieTheater\\MT.Dtos\\MT.Dtos.csproj": {
+    "D:\\Server\\MovieTheater\\MovieTheater\\MovieTheaterAPI\\Services\\MovieTheater\\MT.Dtos\\MT.Dtos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Server\\MovieTheaterAPI\\Services\\MovieTheater\\MT.Dtos\\MT.Dtos.csproj",
+        "projectUniqueName": "D:\\Server\\MovieTheater\\MovieTheater\\MovieTheaterAPI\\Services\\MovieTheater\\MT.Dtos\\MT.Dtos.csproj",
         "projectName": "MT.Dtos",
-        "projectPath": "D:\\Server\\MovieTheaterAPI\\Services\\MovieTheater\\MT.Dtos\\MT.Dtos.csproj",
+        "projectPath": "D:\\Server\\MovieTheater\\MovieTheater\\MovieTheaterAPI\\Services\\MovieTheater\\MT.Dtos\\MT.Dtos.csproj",
         "packagesPath": "C:\\Users\\hieub\\.nuget\\packages\\",
-        "outputPath": "D:\\Server\\MovieTheaterAPI\\Services\\MovieTheater\\MT.Dtos\\obj\\",
+        "outputPath": "D:\\Server\\MovieTheater\\MovieTheater\\MovieTheaterAPI\\Services\\MovieTheater\\MT.Dtos\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -268,8 +276,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\Server\\MovieTheaterAPI\\Services\\MovieTheater\\MT.Domain\\MT.Domain.csproj": {
-                "projectPath": "D:\\Server\\MovieTheaterAPI\\Services\\MovieTheater\\MT.Domain\\MT.Domain.csproj"
+              "D:\\Server\\MovieTheater\\MovieTheater\\MovieTheaterAPI\\Services\\MovieTheater\\MT.Domain\\MT.Domain.csproj": {
+                "projectPath": "D:\\Server\\MovieTheater\\MovieTheater\\MovieTheaterAPI\\Services\\MovieTheater\\MT.Domain\\MT.Domain.csproj"
               }
             }
           }
@@ -319,6 +327,10 @@
               "target": "Package",
               "version": "[13.0.3, )"
             },
+            "QRCoder": {
+              "target": "Package",
+              "version": "[1.6.0, )"
+            },
             "RestSharp": {
               "target": "Package",
               "version": "[112.1.0, )"
@@ -352,14 +364,14 @@
         }
       }
     },
-    "D:\\Server\\MovieTheaterAPI\\Services\\MovieTheater\\MT.Infrastructure\\MT.Infrastructure.csproj": {
+    "D:\\Server\\MovieTheater\\MovieTheater\\MovieTheaterAPI\\Services\\MovieTheater\\MT.Infrastructure\\MT.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Server\\MovieTheaterAPI\\Services\\MovieTheater\\MT.Infrastructure\\MT.Infrastructure.csproj",
+        "projectUniqueName": "D:\\Server\\MovieTheater\\MovieTheater\\MovieTheaterAPI\\Services\\MovieTheater\\MT.Infrastructure\\MT.Infrastructure.csproj",
         "projectName": "MT.Infrastructure",
-        "projectPath": "D:\\Server\\MovieTheaterAPI\\Services\\MovieTheater\\MT.Infrastructure\\MT.Infrastructure.csproj",
+        "projectPath": "D:\\Server\\MovieTheater\\MovieTheater\\MovieTheaterAPI\\Services\\MovieTheater\\MT.Infrastructure\\MT.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\hieub\\.nuget\\packages\\",
-        "outputPath": "D:\\Server\\MovieTheaterAPI\\Services\\MovieTheater\\MT.Infrastructure\\obj\\",
+        "outputPath": "D:\\Server\\MovieTheater\\MovieTheater\\MovieTheaterAPI\\Services\\MovieTheater\\MT.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -381,8 +393,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\Server\\MovieTheaterAPI\\Services\\MovieTheater\\MT.Domain\\MT.Domain.csproj": {
-                "projectPath": "D:\\Server\\MovieTheaterAPI\\Services\\MovieTheater\\MT.Domain\\MT.Domain.csproj"
+              "D:\\Server\\MovieTheater\\MovieTheater\\MovieTheaterAPI\\Services\\MovieTheater\\MT.Domain\\MT.Domain.csproj": {
+                "projectPath": "D:\\Server\\MovieTheater\\MovieTheater\\MovieTheaterAPI\\Services\\MovieTheater\\MT.Domain\\MT.Domain.csproj"
               }
             }
           }
@@ -432,6 +444,10 @@
               "target": "Package",
               "version": "[13.0.3, )"
             },
+            "QRCoder": {
+              "target": "Package",
+              "version": "[1.6.0, )"
+            },
             "RestSharp": {
               "target": "Package",
               "version": "[112.1.0, )"
@@ -465,14 +481,14 @@
         }
       }
     },
-    "D:\\Server\\MovieTheaterAPI\\Services\\Shared\\MT.Shared.Constant\\MT.Shared.Constant.csproj": {
+    "D:\\Server\\MovieTheater\\MovieTheater\\MovieTheaterAPI\\Services\\Shared\\MT.Shared.Constant\\MT.Shared.Constant.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Server\\MovieTheaterAPI\\Services\\Shared\\MT.Shared.Constant\\MT.Shared.Constant.csproj",
+        "projectUniqueName": "D:\\Server\\MovieTheater\\MovieTheater\\MovieTheaterAPI\\Services\\Shared\\MT.Shared.Constant\\MT.Shared.Constant.csproj",
         "projectName": "MT.Shared.Constant",
-        "projectPath": "D:\\Server\\MovieTheaterAPI\\Services\\Shared\\MT.Shared.Constant\\MT.Shared.Constant.csproj",
+        "projectPath": "D:\\Server\\MovieTheater\\MovieTheater\\MovieTheaterAPI\\Services\\Shared\\MT.Shared.Constant\\MT.Shared.Constant.csproj",
         "packagesPath": "C:\\Users\\hieub\\.nuget\\packages\\",
-        "outputPath": "D:\\Server\\MovieTheaterAPI\\Services\\Shared\\MT.Shared.Constant\\obj\\",
+        "outputPath": "D:\\Server\\MovieTheater\\MovieTheater\\MovieTheaterAPI\\Services\\Shared\\MT.Shared.Constant\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -540,6 +556,10 @@
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.3, )"
+            },
+            "QRCoder": {
+              "target": "Package",
+              "version": "[1.6.0, )"
             },
             "RestSharp": {
               "target": "Package",

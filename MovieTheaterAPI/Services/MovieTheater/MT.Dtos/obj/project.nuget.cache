@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "UlJMa04t0DYKQABeW0u6kRyCa07AcXq4tXCat0YBh4P5Qgv20BRJv1YgbjYhOVgVYKju8Bdy3n2JNaRsZhJytw==",
+  "dgSpecHash": "l5/n/sxEVbGY3O1AY6b7b9w1frHn+HBLH4ynOmFaM1EBIhPo8A7eQ0S0wSvTjiZdZeId5eoqnyABuRywD2eTDg==",
   "success": true,
-  "projectFilePath": "D:\\Server\\MovieTheaterAPI\\Services\\MovieTheater\\MT.Dtos\\MT.Dtos.csproj",
+  "projectFilePath": "D:\\Server\\MovieTheater\\MovieTheater\\MovieTheaterAPI\\Services\\MovieTheater\\MT.Dtos\\MT.Dtos.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\hieub\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\hieub\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
@@ -49,6 +49,7 @@
     "C:\\Users\\hieub\\.nuget\\packages\\mimekit\\4.8.0\\mimekit.4.8.0.nupkg.sha512",
     "C:\\Users\\hieub\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
     "C:\\Users\\hieub\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\hieub\\.nuget\\packages\\qrcoder\\1.6.0\\qrcoder.1.6.0.nupkg.sha512",
     "C:\\Users\\hieub\\.nuget\\packages\\restsharp\\112.1.0\\restsharp.112.1.0.nupkg.sha512",
     "C:\\Users\\hieub\\.nuget\\packages\\system.codedom\\4.4.0\\system.codedom.4.4.0.nupkg.sha512",
     "C:\\Users\\hieub\\.nuget\\packages\\system.collections.immutable\\6.0.0\\system.collections.immutable.6.0.0.nupkg.sha512",

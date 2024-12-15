@@ -1,11 +1,9 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using MT.Applicationservices.Module.Abstracts;
 using MT.Domain;
-using MT.Dtos.Payment;
 using MT.Infrastructure;
-using Newtonsoft.Json;
+using QRCoder;
 using System;
 using System.Globalization;
 using System.Linq;
@@ -18,43 +16,21 @@ namespace MT.Applicationservices.Module.Implements
 {
     public class VietQrService : IVietQrService
     {
-        private readonly HttpClient _httpClient;
         private readonly MovieTheaterDbContext _dbContext;
         private readonly EmailService _emailService;
-        private readonly ILogger<VietQrService> _logger;  // Khai báo _logger
+        private readonly ILogger<VietQrService> _logger;
+        private readonly HttpClient _httpClient;
 
-        public VietQrService(HttpClient httpClient, MovieTheaterDbContext dbContext, EmailService emailService, ILogger<VietQrService> logger)
+        public VietQrService(MovieTheaterDbContext dbContext, EmailService emailService, ILogger<VietQrService> logger, HttpClient httpClient)
         {
-            _httpClient = httpClient;
             _dbContext = dbContext;
             _emailService = emailService;
-            _logger = logger;  // Khởi tạo _logger
+            _logger = logger;
+            _httpClient = httpClient;
         }
 
-        // Lấy Access Token từ OAuth2
-        public async Task<string> GetAccessTokenAsync()
-        {
-            string clientId = "your_client_id";
-            string clientSecret = "your_client_secret";
-            string tokenUrl = "https://api.vietqr.io/oauth2/token";
-
-            var requestBody = new FormUrlEncodedContent(new[] {
-                new KeyValuePair<string, string>("grant_type", "client_credentials"),
-                new KeyValuePair<string, string>("client_id", clientId),
-                new KeyValuePair<string, string>("client_secret", clientSecret)
-            });
-
-            var response = await _httpClient.PostAsync(tokenUrl, requestBody);
-            response.EnsureSuccessStatusCode();
-
-            var responseContent = await response.Content.ReadAsStringAsync();
-            var tokenResponse = JsonConvert.DeserializeObject<TokenResponse>(responseContent);
-
-            return tokenResponse.AccessToken;
-        }
-
-        // Tạo URL QR thanh toán
-        public async Task<string> GeneratePaymentQrAsync(int ticketId)
+        // Sinh QR thanh toán
+         public async Task<string> GeneratePaymentQrAsync(int ticketId)
         {
             var ticket = await _dbContext.Tickets.FirstOrDefaultAsync(t => t.Id == ticketId);
             if (ticket == null) throw new Exception("Ticket not found.");
@@ -70,104 +46,116 @@ namespace MT.Applicationservices.Module.Implements
             return qrUrl;
         }
 
-        // Kiểm tra giao dịch từ API
-        public async Task<bool> VerifyPaymentAsync(int ticketId)
+        // Sinh QR thông tin vé
+        public async Task<string> GenerateTicketQrAsync(int ticketId)
         {
-            _logger.LogInformation("Verifying payment for ticketId: " + ticketId);  // Ghi log thông tin ticketId
+            var ticket = await _dbContext.Tickets
+                .Include(t => t.ShowTime)
+                    .ThenInclude(s => s.Movie)
+                .Include(t => t.ShowTime.CinemaRoom.Cinema)
+                .Include(t => t.TicketSeats)
+                    .ThenInclude(ts => ts.Seat)
+                .FirstOrDefaultAsync(t => t.Id == ticketId);
 
-            string accessToken = await GetAccessTokenAsync();
-            string accountNumber = "19071642735018"; // Số tài khoản nhận
+            if (ticket == null) throw new Exception("Ticket not found.");
 
-            var requestUrl = $"https://api.vietqr.io/v2/transactions?account={accountNumber}";
-            _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", accessToken);
+            // Tạo thông tin vé
+            string ticketInfo = $@"
+                TicketID: {ticket.Id}
+                Movie: {ticket.ShowTime.Movie.Title}
+                Date: {ticket.ShowTime.StartTime:yyyy-MM-dd}
+                Time: {ticket.ShowTime.StartTime:HH:mm} - {ticket.ShowTime.EndTime:HH:mm}
+                Cinema: {ticket.ShowTime.CinemaRoom.Cinema.Name}
+                Room: {ticket.ShowTime.CinemaRoom.Name}
+                Seat: {string.Join(", ", ticket.TicketSeats.Select(ts => ts.Seat.SeatCode))}
+                Price: {ticket.TotalPrice:N0} VND";
 
-            var response = await _httpClient.GetAsync(requestUrl);
-            if (!response.IsSuccessStatusCode)
-            {
-                _logger.LogError($"Failed to get transactions. Status code: {response.StatusCode}, Reason: {response.ReasonPhrase}");
-                return false;
-            }
-
-            var responseContent = await response.Content.ReadAsStringAsync();
-            var transactionResponse = JsonConvert.DeserializeObject<TransactionResponse>(responseContent);
-
-            var ticket = await _dbContext.Tickets.FirstOrDefaultAsync(t => t.Id == ticketId);
-            if (ticket == null)
-            {
-                _logger.LogWarning($"Ticket with Id {ticketId} not found.");
-                return false;
-            }
-
-            var transaction = transactionResponse.Transactions.FirstOrDefault(t =>
-                t.AddInfo.Contains($"Thanh toán vé {ticketId}") && t.Amount == ticket.TotalPrice && t.Status == "SUCCESS");
-
-            if (transaction == null)
-            {
-                _logger.LogWarning($"No successful transaction found for ticketId {ticketId}.");
-                return false;
-            }
-
-            // Cập nhật trạng thái thanh toán
-            ticket.Status = "Đã thanh toán";
-            _dbContext.Tickets.Update(ticket);
-
-            var payment = new Payment
-            {
-                TicketId = ticketId,
-                Amount = ticket.TotalPrice,
-                Status = "Đã thanh toán",
-                PaymentDate = DateTime.UtcNow,
-                PaymentMethod = "VietQR",
-                TransactionId = transaction.TransactionId
-            };
-
-            await _dbContext.Payments.AddAsync(payment);
-            await _dbContext.SaveChangesAsync();
-
-            // Gửi email thông báo
-            await SendPaymentSuccessEmail(ticket);
-
-            return true;
+            // Gọi hàm để lưu QR Code thành file ảnh
+            string fileName = $"ticket_{ticket.Id}.png";
+            return GenerateAndSaveQrCode(ticketInfo, fileName);
         }
 
-        // Gửi email thông báo sau khi thanh toán thành công
-        private async Task SendPaymentSuccessEmail(Ticket ticket)
+
+
+
+        // Gửi email với thông tin vé và QR thông tin vé
+        public async Task SendPaymentSuccessEmailAsync(int ticketId)
         {
+            var ticket = await _dbContext.Tickets
+                .Include(t => t.ShowTime)
+                    .ThenInclude(s => s.Movie)
+                .Include(t => t.ShowTime)
+                    .ThenInclude(s => s.CinemaRoom)
+                        .ThenInclude(cr => cr.Cinema)
+                .Include(t => t.TicketSeats)
+                    .ThenInclude(ts => ts.Seat)
+                .FirstOrDefaultAsync(t => t.Id == ticketId);
+
+            if (ticket == null) throw new Exception("Ticket not found.");
+
             var user = await _dbContext.Users.FirstOrDefaultAsync(u => u.Id == ticket.UserId);
             if (user == null) throw new Exception("User not found.");
 
+            // Tạo QR chứa thông tin vé
+            string ticketQr = await GenerateTicketQrAsync(ticketId);
+
             string subject = "Xác nhận thanh toán vé thành công";
             string message = $@"
-                <h1>Chào {user.FullName},</h1>
-                <p>Bạn đã thanh toán thành công vé xem phim với mã vé <strong>{ticket.Id}</strong>.</p>
-                <p>Thông tin chi tiết:</p>
-                <ul>
-                    <li>Phim: {ticket.ShowTime.Movie.Title}</li>
-                    <li>Rạp: {ticket.ShowTime.CinemaRoom.Cinema.Name}</li>
-                    <li>Thời gian: {ticket.ShowTime}</li>
-                    <li>Số tiền: {ticket.TotalPrice} VND</li>
-                </ul>
-                <p>Cảm ơn bạn đã sử dụng dịch vụ của chúng tôi!</p>
-            ";
+        <div style='font-family: Arial, sans-serif; line-height: 1.6;'>
+            <h2 style='color: #4CAF50;'>Chào {user.FullName},</h2>
+            <p>Bạn đã thanh toán thành công vé xem phim với mã vé <strong>{ticket.Id}</strong>.</p>
+            <h3>Thông tin vé:</h3>
+            <ul>
+                <li><strong>Phim:</strong> {ticket.ShowTime.Movie.Title}</li>
+                <li><strong>Rạp:</strong> {ticket.ShowTime.CinemaRoom.Cinema.Name}</li>
+                <li><strong>Phòng chiếu:</strong> {ticket.ShowTime.CinemaRoom.Name}</li>
+                <li><strong>Thời gian:</strong> {ticket.ShowTime.StartTime:yyyy-MM-dd HH:mm} - {ticket.ShowTime.EndTime:HH:mm}</li>
+                <li><strong>Ghế:</strong> {string.Join(", ", ticket.TicketSeats.Select(ts => ts.Seat.SeatCode))}</li>
+                <li><strong>Tổng tiền:</strong> {ticket.TotalPrice:N0} VND</li>
+            </ul>
+            <p><strong>Mã QR thông tin vé:</strong></p>
+            <img src='{ticketQr}' alt='QR Code' style='margin-top: 10px;' />
+            <p>Cảm ơn bạn đã sử dụng dịch vụ của chúng tôi!</p>
+        </div>";
 
             await _emailService.SendEmailAsync(user.Email, subject, message);
         }
 
-        // Chuẩn hóa chuỗi: loại bỏ dấu trong tiếng Việt
-        private static string RemoveDiacritics(string input)
+
+        // Hàm tạo mã QR (dành cho thông tin vé)
+        private string GenerateAndSaveQrCode(string content, string fileName)
         {
-            string normalizedString = input.Normalize(NormalizationForm.FormD);
-            StringBuilder stringBuilder = new StringBuilder();
+            // Đường dẫn lưu file QR code vào wwwroot/qrcodes
+            string qrCodeSavePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/qrcodes");
 
-            foreach (char c in normalizedString)
+            // Đường dẫn HTTPS local, khớp với cổng bạn đang chạy (7214)
+            string baseUrl = "https://localhost:7214/qrcodes";
+
+            try
             {
-                if (CharUnicodeInfo.GetUnicodeCategory(c) != UnicodeCategory.NonSpacingMark)
-                {
-                    stringBuilder.Append(c);
-                }
-            }
+                using var qrGenerator = new QRCoder.QRCodeGenerator();
+                var qrCodeData = qrGenerator.CreateQrCode(content, QRCoder.QRCodeGenerator.ECCLevel.Q);
+                var pngQrCode = new QRCoder.PngByteQRCode(qrCodeData);
+                byte[] qrCodeBytes = pngQrCode.GetGraphic(20);
 
-            return stringBuilder.ToString().Normalize(NormalizationForm.FormC);
+                // Tạo thư mục lưu nếu chưa tồn tại
+                if (!Directory.Exists(qrCodeSavePath))
+                {
+                    Directory.CreateDirectory(qrCodeSavePath);
+                }
+
+                // Lưu file QR code vào đường dẫn
+                string filePath = Path.Combine(qrCodeSavePath, fileName);
+                File.WriteAllBytes(filePath, qrCodeBytes);
+
+                // Trả về URL local HTTPS
+                return $"{baseUrl}/{fileName}";
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Error generating QR code: {ex.Message}");
+                throw new Exception("Failed to generate QR code.");
+            }
         }
     }
 }

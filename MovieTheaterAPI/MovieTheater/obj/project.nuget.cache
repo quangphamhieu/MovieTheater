@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "2Ds3RaSwbQk0AvWDoiyWSSuQXG7GyM/4VsTTUBRYuCX0GVctt2ipF6y4ChDoiCWDoZT6pLpD5tio8kJRlO8q8Q==",
+  "dgSpecHash": "VQwEJ/xkIexrVQrYd02Ax0aF0ubVIrDwtkBr+2wkT6qEw34nv5WePeYS5802OOd45RYzOk4YIG5pnRQhXrcA3g==",
   "success": true,
-  "projectFilePath": "D:\\Server\\MovieTheaterAPI\\MovieTheater\\MovieTheater.csproj",
+  "projectFilePath": "D:\\Server\\MovieTheater\\MovieTheater\\MovieTheaterAPI\\MovieTheater\\MovieTheater.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\hieub\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\hieub\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
@@ -51,6 +51,7 @@
     "C:\\Users\\hieub\\.nuget\\packages\\mimekit\\4.8.0\\mimekit.4.8.0.nupkg.sha512",
     "C:\\Users\\hieub\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
     "C:\\Users\\hieub\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\hieub\\.nuget\\packages\\qrcoder\\1.6.0\\qrcoder.1.6.0.nupkg.sha512",
     "C:\\Users\\hieub\\.nuget\\packages\\restsharp\\112.1.0\\restsharp.112.1.0.nupkg.sha512",
     "C:\\Users\\hieub\\.nuget\\packages\\swashbuckle.aspnetcore\\6.4.0\\swashbuckle.aspnetcore.6.4.0.nupkg.sha512",
     "C:\\Users\\hieub\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.4.0\\swashbuckle.aspnetcore.swagger.6.4.0.nupkg.sha512",

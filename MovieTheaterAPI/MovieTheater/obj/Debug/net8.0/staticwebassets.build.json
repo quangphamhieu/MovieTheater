@@ -1,11 +1,77 @@
 {
   "Version": 1,
-  "Hash": "A4mpMwfiowGo6TRxi8kvSdme3HLoItchuDb2Z3gHwtk=",
+  "Hash": "O+3F2EtAZXV2eAhNIZpiqEqAp+IS2Rpa+2mxH8mi780=",
   "Source": "MovieTheater",
   "BasePath": "_content/MovieTheater",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "MovieTheater\\wwwroot",
+      "Source": "MovieTheater",
+      "ContentRoot": "D:\\Server\\MovieTheater\\MovieTheater\\MovieTheaterAPI\\MovieTheater\\wwwroot\\",
+      "BasePath": "_content/MovieTheater",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "D:\\Server\\MovieTheater\\MovieTheater\\MovieTheaterAPI\\MovieTheater\\wwwroot\\qrcodes\\ticket_1.png",
+      "SourceId": "MovieTheater",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Server\\MovieTheater\\MovieTheater\\MovieTheaterAPI\\MovieTheater\\wwwroot\\",
+      "BasePath": "_content/MovieTheater",
+      "RelativePath": "qrcodes/ticket_1.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\qrcodes\\ticket_1.png"
+    },
+    {
+      "Identity": "D:\\Server\\MovieTheater\\MovieTheater\\MovieTheaterAPI\\MovieTheater\\wwwroot\\qrcodes\\ticket_2.png",
+      "SourceId": "MovieTheater",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Server\\MovieTheater\\MovieTheater\\MovieTheaterAPI\\MovieTheater\\wwwroot\\",
+      "BasePath": "_content/MovieTheater",
+      "RelativePath": "qrcodes/ticket_2.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\qrcodes\\ticket_2.png"
+    },
+    {
+      "Identity": "D:\\Server\\MovieTheater\\MovieTheater\\MovieTheaterAPI\\MovieTheater\\wwwroot\\qrcodes\\ticket_3.png",
+      "SourceId": "MovieTheater",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Server\\MovieTheater\\MovieTheater\\MovieTheaterAPI\\MovieTheater\\wwwroot\\",
+      "BasePath": "_content/MovieTheater",
+      "RelativePath": "qrcodes/ticket_3.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\qrcodes\\ticket_3.png"
+    }
+  ]
 }
