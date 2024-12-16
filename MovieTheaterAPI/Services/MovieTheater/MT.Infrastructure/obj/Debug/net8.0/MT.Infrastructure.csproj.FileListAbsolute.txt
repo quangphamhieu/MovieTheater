@@ -37,3 +37,23 @@ D:\Server\MovieTheater\MovieTheater\MovieTheaterAPI\Services\MovieTheater\MT.Inf
 D:\Server\MovieTheater\MovieTheater\MovieTheaterAPI\Services\MovieTheater\MT.Infrastructure\obj\Debug\net8.0\MT.Infrastructure.pdb
 D:\Server\MovieTheater\MovieTheater\MovieTheaterAPI\Services\MovieTheater\MT.Infrastructure\obj\Debug\net8.0\MT.Infrastructure.genruntimeconfig.cache
 D:\Server\MovieTheater\MovieTheater\MovieTheaterAPI\Services\MovieTheater\MT.Infrastructure\obj\Debug\net8.0\ref\MT.Infrastructure.dll
+D:\Đồ án Sever\MovieTheater\MovieTheaterAPI\Services\MovieTheater\MT.Infrastructure\bin\Debug\net8.0\MT.Infrastructure.deps.json
+D:\Đồ án Sever\MovieTheater\MovieTheaterAPI\Services\MovieTheater\MT.Infrastructure\bin\Debug\net8.0\MT.Infrastructure.runtimeconfig.json
+D:\Đồ án Sever\MovieTheater\MovieTheaterAPI\Services\MovieTheater\MT.Infrastructure\bin\Debug\net8.0\MT.Infrastructure.dll
+D:\Đồ án Sever\MovieTheater\MovieTheaterAPI\Services\MovieTheater\MT.Infrastructure\bin\Debug\net8.0\MT.Infrastructure.pdb
+D:\Đồ án Sever\MovieTheater\MovieTheaterAPI\Services\MovieTheater\MT.Infrastructure\bin\Debug\net8.0\MT.Domain.dll
+D:\Đồ án Sever\MovieTheater\MovieTheaterAPI\Services\MovieTheater\MT.Infrastructure\bin\Debug\net8.0\MT.Shared.Constant.dll
+D:\Đồ án Sever\MovieTheater\MovieTheaterAPI\Services\MovieTheater\MT.Infrastructure\bin\Debug\net8.0\MT.Domain.pdb
+D:\Đồ án Sever\MovieTheater\MovieTheaterAPI\Services\MovieTheater\MT.Infrastructure\bin\Debug\net8.0\MT.Shared.Constant.pdb
+D:\Đồ án Sever\MovieTheater\MovieTheaterAPI\Services\MovieTheater\MT.Infrastructure\obj\Debug\net8.0\MT.Infrastructure.csproj.AssemblyReference.cache
+D:\Đồ án Sever\MovieTheater\MovieTheaterAPI\Services\MovieTheater\MT.Infrastructure\obj\Debug\net8.0\MT.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\Đồ án Sever\MovieTheater\MovieTheaterAPI\Services\MovieTheater\MT.Infrastructure\obj\Debug\net8.0\MT.Infrastructure.AssemblyInfoInputs.cache
+D:\Đồ án Sever\MovieTheater\MovieTheaterAPI\Services\MovieTheater\MT.Infrastructure\obj\Debug\net8.0\MT.Infrastructure.AssemblyInfo.cs
+D:\Đồ án Sever\MovieTheater\MovieTheaterAPI\Services\MovieTheater\MT.Infrastructure\obj\Debug\net8.0\MT.Infrastructure.csproj.CoreCompileInputs.cache
+D:\Đồ án Sever\MovieTheater\MovieTheaterAPI\Services\MovieTheater\MT.Infrastructure\obj\Debug\net8.0\MT.Infrastructure.sourcelink.json
+D:\Đồ án Sever\MovieTheater\MovieTheaterAPI\Services\MovieTheater\MT.Infrastructure\obj\Debug\net8.0\MT.Infra.30B89062.Up2Date
+D:\Đồ án Sever\MovieTheater\MovieTheaterAPI\Services\MovieTheater\MT.Infrastructure\obj\Debug\net8.0\MT.Infrastructure.dll
+D:\Đồ án Sever\MovieTheater\MovieTheaterAPI\Services\MovieTheater\MT.Infrastructure\obj\Debug\net8.0\refint\MT.Infrastructure.dll
+D:\Đồ án Sever\MovieTheater\MovieTheaterAPI\Services\MovieTheater\MT.Infrastructure\obj\Debug\net8.0\MT.Infrastructure.pdb
+D:\Đồ án Sever\MovieTheater\MovieTheaterAPI\Services\MovieTheater\MT.Infrastructure\obj\Debug\net8.0\MT.Infrastructure.genruntimeconfig.cache
+D:\Đồ án Sever\MovieTheater\MovieTheaterAPI\Services\MovieTheater\MT.Infrastructure\obj\Debug\net8.0\ref\MT.Infrastructure.dll

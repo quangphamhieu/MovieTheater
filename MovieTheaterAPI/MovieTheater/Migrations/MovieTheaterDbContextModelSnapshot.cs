@@ -144,6 +144,39 @@ namespace MovieTheater.Migrations
                     b.ToTable("Director", "theater");
                 });
 
+            modelBuilder.Entity("MT.Domain.Discount", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Code")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("EndDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("MaxUsage")
+                        .HasColumnType("int");
+
+                    b.Property<double>("Percentage")
+                        .HasColumnType("float");
+
+                    b.Property<DateTime>("StartDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Discounts");
+                });
+
             modelBuilder.Entity("MT.Domain.Genre", b =>
                 {
                     b.Property<int>("Id")
@@ -390,6 +423,29 @@ namespace MovieTheater.Migrations
                     b.ToTable("Ticket", "theater");
                 });
 
+            modelBuilder.Entity("MT.Domain.TicketDiscount", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("DiscountId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("TicketId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("DiscountId");
+
+                    b.HasIndex("TicketId");
+
+                    b.ToTable("TicketDiscounts");
+                });
+
             modelBuilder.Entity("MT.Domain.TicketSeat", b =>
                 {
                     b.Property<int>("Id")
@@ -481,6 +537,35 @@ namespace MovieTheater.Migrations
                             PhoneNumber = "0123456789",
                             RoleId = 1
                         });
+                });
+
+            modelBuilder.Entity("MT.Domain.UserDiscount", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("DiscountId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("UsageDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("Used")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("DiscountId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("UserDiscounts");
                 });
 
             modelBuilder.Entity("MT.Domain.UserNotification", b =>
@@ -638,6 +723,25 @@ namespace MovieTheater.Migrations
                     b.Navigation("User");
                 });
 
+            modelBuilder.Entity("MT.Domain.TicketDiscount", b =>
+                {
+                    b.HasOne("MT.Domain.Discount", "Discount")
+                        .WithMany("TicketDiscounts")
+                        .HasForeignKey("DiscountId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("MT.Domain.Ticket", "Ticket")
+                        .WithMany("TicketDiscounts")
+                        .HasForeignKey("TicketId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Discount");
+
+                    b.Navigation("Ticket");
+                });
+
             modelBuilder.Entity("MT.Domain.TicketSeat", b =>
                 {
                     b.HasOne("MT.Domain.Seat", "Seat")
@@ -666,6 +770,25 @@ namespace MovieTheater.Migrations
                         .IsRequired();
 
                     b.Navigation("Role");
+                });
+
+            modelBuilder.Entity("MT.Domain.UserDiscount", b =>
+                {
+                    b.HasOne("MT.Domain.Discount", "Discount")
+                        .WithMany("UserDiscounts")
+                        .HasForeignKey("DiscountId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("MT.Domain.User", "User")
+                        .WithMany("UserDiscounts")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Discount");
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("MT.Domain.UserNotification", b =>
@@ -707,6 +830,13 @@ namespace MovieTheater.Migrations
                     b.Navigation("Movies");
                 });
 
+            modelBuilder.Entity("MT.Domain.Discount", b =>
+                {
+                    b.Navigation("TicketDiscounts");
+
+                    b.Navigation("UserDiscounts");
+                });
+
             modelBuilder.Entity("MT.Domain.Genre", b =>
                 {
                     b.Navigation("MovieGenres");
@@ -730,6 +860,8 @@ namespace MovieTheater.Migrations
 
             modelBuilder.Entity("MT.Domain.Ticket", b =>
                 {
+                    b.Navigation("TicketDiscounts");
+
                     b.Navigation("TicketSeats");
                 });
 
@@ -738,6 +870,8 @@ namespace MovieTheater.Migrations
                     b.Navigation("Comments");
 
                     b.Navigation("Tickets");
+
+                    b.Navigation("UserDiscounts");
                 });
 #pragma warning restore 612, 618
         }

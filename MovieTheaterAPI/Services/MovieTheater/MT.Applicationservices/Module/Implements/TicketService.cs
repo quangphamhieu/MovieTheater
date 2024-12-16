@@ -6,6 +6,7 @@ using MT.Domain;
 using MT.Dtos.Seat;
 using MT.Dtos.Ticket;
 using MT.Infrastructure;
+using MT.Shared.Constant.Status;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,57 +16,71 @@ using System.Threading.Tasks;
 namespace MT.Applicationservices.Module.Implements
 {
     public class TicketService : MovieTheaterBaseService, ITicketService
+
     {
-        public TicketService(ILogger<TicketService> logger, MovieTheaterDbContext dbContext)
+        private readonly IDiscountService _discountService;
+        public TicketService(ILogger<TicketService> logger, MovieTheaterDbContext dbContext, IDiscountService discountService)
             : base(logger, dbContext)
         {
+            _discountService = discountService;
         }
 
-        public async Task<TicketDto> CreateTicketAsync(int showTimeId, List<int> seatIds, int userId)
+        public async Task<TicketDto> CreateTicketAsync(TicketCreateRequest ticketCreateRequest, int userId)
         {
-            _logger.LogInformation($"Creating ticket for ShowTime {showTimeId} by User {userId}.");
-            
+            _logger.LogInformation($"Creating ticket for ShowTime {ticketCreateRequest.ShowTimeId} by User {userId}.");
+
 
             // Kiểm tra ShowTime
             var showTime = await _dbContext.ShowTimes
                 .Include(st => st.Movie)
                 .Include(st => st.CinemaRoom.Cinema)
-                .FirstOrDefaultAsync(st => st.Id == showTimeId);
+                .FirstOrDefaultAsync(st => st.Id == ticketCreateRequest.ShowTimeId);
 
             if (showTime == null)
             {
-                _logger.LogWarning($"ShowTime {showTimeId} not found.");
+                _logger.LogWarning($"ShowTime {ticketCreateRequest.ShowTimeId} not found.");
                 throw new Exception("ShowTime not found");
             }
 
             // Kiểm tra danh sách ghế
-            if (seatIds == null || !seatIds.Any())
+            if (ticketCreateRequest.SeatIds == null || !ticketCreateRequest.SeatIds.Any())
             {
-                _logger.LogWarning($"No seats selected for ShowTime {showTimeId}.");
+                _logger.LogWarning($"No seats selected for ShowTime {ticketCreateRequest.ShowTimeId}.");
                 throw new Exception("No seats selected");
             }
 
             // Kiểm tra tính khả dụng của ghế
             var seats = await _dbContext.Seats
-                .Where(s => seatIds.Contains(s.Id) &&
-                            !_dbContext.TicketSeats.Any(ts => ts.SeatId == s.Id && ts.Ticket.ShowTimeId == showTimeId && ts.Status == "Booked"))
+                .Where(s => ticketCreateRequest.SeatIds.Contains(s.Id) &&
+                            !_dbContext.TicketSeats.Any(ts => ts.SeatId == s.Id && ts.Ticket.ShowTimeId == ticketCreateRequest.ShowTimeId && ts.Status == "Booked"))
                 .ToListAsync();
 
-            if (seats.Count != seatIds.Count)
+            if (seats.Count != ticketCreateRequest.SeatIds.Count)
             {
-                _logger.LogWarning($"One or more seats are already booked for ShowTime {showTimeId}.");
+                _logger.LogWarning($"One or more seats are already booked for ShowTime {ticketCreateRequest.ShowTimeId}.");
                 throw new Exception("One or more seats are already booked");
             }
-
-            // Tính tổng giá tiền và tạo ticket
             var totalPrice = seats.Sum(s => s.Price);
+            if (!string.IsNullOrEmpty(ticketCreateRequest.DiscountCode))
+            {
+                var discountApplied = await _discountService.ApplyDiscountAsync(userId, ticketCreateRequest.DiscountCode);
+                if (discountApplied)
+                {
+                    var discount = await _dbContext.Discounts.SingleOrDefaultAsync(d => d.Code == ticketCreateRequest.DiscountCode);
+                    if (discount != null)
+                    {
+                        totalPrice -= totalPrice * ((decimal)discount.Percentage / 100);
+                    }
+                }
+            }
+            // Tính tổng giá tiền và tạo ticket
             var ticket = new Ticket
             {
                 UserId = userId,
-                ShowTimeId = showTimeId,
+                ShowTimeId = ticketCreateRequest.ShowTimeId,
                 TotalPrice = totalPrice,
                 BookingTime = DateTime.UtcNow,
-                Status = "Còn hạn"
+                Status = StatusConstants.Ticket.Active,
             };
 
             _dbContext.Tickets.Add(ticket);
@@ -78,14 +93,14 @@ namespace MT.Applicationservices.Module.Implements
                 {
                     TicketId = ticket.Id,
                     SeatId = seat.Id,
-                    Status = "Booked"
+                    Status = StatusConstants.Ticket.Booked,
                 };
                 _dbContext.TicketSeats.Add(ticketSeat);
             }
 
             await _dbContext.SaveChangesAsync();
 
-            _logger.LogInformation($"Ticket {ticket.Id} created successfully for ShowTime {showTimeId}.");
+            _logger.LogInformation($"Ticket {ticket.Id} created successfully for ShowTime {ticketCreateRequest.ShowTimeId}.");
 
             return new TicketDto
             {
@@ -97,7 +112,9 @@ namespace MT.Applicationservices.Module.Implements
                 Seats = seats.Select(s => new SeatDto(s)).ToList(),
                 TotalPrice = ticket.TotalPrice,
                 BookingTime = ticket.BookingTime,
-                Status = ticket.Status
+                Status = ticket.Status,
+                DiscountCode = ticketCreateRequest.DiscountCode,
+
             };
         }
 

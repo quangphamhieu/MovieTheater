@@ -30,6 +30,9 @@ namespace MT.Infrastructure
         public DbSet<TicketSeat> TicketSeats { get; set; }
         public DbSet<Notification> Notifications { get; set; }
         public DbSet<UserNotification> UserNotifications { get; set; }
+        public DbSet<UserDiscount> UserDiscounts { get; set; }
+        public DbSet<TicketDiscount> TicketDiscounts { get; set; }
+        public DbSet<Discount> Discounts { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -135,7 +138,21 @@ namespace MT.Infrastructure
                 .HasOne(un => un.Notification)
                 .WithMany()
                 .HasForeignKey(un => un.NotificationId);
-
+            modelBuilder.Entity<UserDiscount>()
+                .HasOne(ud => ud.User).WithMany(u => u.UserDiscounts)
+                .HasForeignKey(ud => ud.UserId);
+            modelBuilder.Entity<UserDiscount>()
+                .HasOne(ud => ud.Discount)
+                .WithMany(d => d.UserDiscounts)
+                .HasForeignKey(ud => ud.DiscountId);
+            modelBuilder.Entity<TicketDiscount>()
+                .HasOne(td => td.Ticket)
+                .WithMany(t => t.TicketDiscounts)
+                .HasForeignKey(td => td.TicketId);
+            modelBuilder.Entity<TicketDiscount>()
+                .HasOne(td => td.Discount)
+                .WithMany(d => d.TicketDiscounts)
+                .HasForeignKey(td => td.DiscountId);
 
 
             var adminRole = new Role { Id = 1, RoleName = "Admin" };

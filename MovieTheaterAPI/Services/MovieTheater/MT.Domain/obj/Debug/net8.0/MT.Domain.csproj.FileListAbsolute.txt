@@ -33,3 +33,21 @@ D:\Server\MovieTheater\MovieTheater\MovieTheaterAPI\Services\MovieTheater\MT.Dom
 D:\Server\MovieTheater\MovieTheater\MovieTheaterAPI\Services\MovieTheater\MT.Domain\obj\Debug\net8.0\MT.Domain.pdb
 D:\Server\MovieTheater\MovieTheater\MovieTheaterAPI\Services\MovieTheater\MT.Domain\obj\Debug\net8.0\MT.Domain.genruntimeconfig.cache
 D:\Server\MovieTheater\MovieTheater\MovieTheaterAPI\Services\MovieTheater\MT.Domain\obj\Debug\net8.0\ref\MT.Domain.dll
+D:\Đồ án Sever\MovieTheater\MovieTheaterAPI\Services\MovieTheater\MT.Domain\bin\Debug\net8.0\MT.Domain.deps.json
+D:\Đồ án Sever\MovieTheater\MovieTheaterAPI\Services\MovieTheater\MT.Domain\bin\Debug\net8.0\MT.Domain.runtimeconfig.json
+D:\Đồ án Sever\MovieTheater\MovieTheaterAPI\Services\MovieTheater\MT.Domain\bin\Debug\net8.0\MT.Domain.dll
+D:\Đồ án Sever\MovieTheater\MovieTheaterAPI\Services\MovieTheater\MT.Domain\bin\Debug\net8.0\MT.Domain.pdb
+D:\Đồ án Sever\MovieTheater\MovieTheaterAPI\Services\MovieTheater\MT.Domain\bin\Debug\net8.0\MT.Shared.Constant.dll
+D:\Đồ án Sever\MovieTheater\MovieTheaterAPI\Services\MovieTheater\MT.Domain\bin\Debug\net8.0\MT.Shared.Constant.pdb
+D:\Đồ án Sever\MovieTheater\MovieTheaterAPI\Services\MovieTheater\MT.Domain\obj\Debug\net8.0\MT.Domain.csproj.AssemblyReference.cache
+D:\Đồ án Sever\MovieTheater\MovieTheaterAPI\Services\MovieTheater\MT.Domain\obj\Debug\net8.0\MT.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Đồ án Sever\MovieTheater\MovieTheaterAPI\Services\MovieTheater\MT.Domain\obj\Debug\net8.0\MT.Domain.AssemblyInfoInputs.cache
+D:\Đồ án Sever\MovieTheater\MovieTheaterAPI\Services\MovieTheater\MT.Domain\obj\Debug\net8.0\MT.Domain.AssemblyInfo.cs
+D:\Đồ án Sever\MovieTheater\MovieTheaterAPI\Services\MovieTheater\MT.Domain\obj\Debug\net8.0\MT.Domain.csproj.CoreCompileInputs.cache
+D:\Đồ án Sever\MovieTheater\MovieTheaterAPI\Services\MovieTheater\MT.Domain\obj\Debug\net8.0\MT.Domain.sourcelink.json
+D:\Đồ án Sever\MovieTheater\MovieTheaterAPI\Services\MovieTheater\MT.Domain\obj\Debug\net8.0\MT.Domain.csproj.Up2Date
+D:\Đồ án Sever\MovieTheater\MovieTheaterAPI\Services\MovieTheater\MT.Domain\obj\Debug\net8.0\MT.Domain.dll
+D:\Đồ án Sever\MovieTheater\MovieTheaterAPI\Services\MovieTheater\MT.Domain\obj\Debug\net8.0\refint\MT.Domain.dll
+D:\Đồ án Sever\MovieTheater\MovieTheaterAPI\Services\MovieTheater\MT.Domain\obj\Debug\net8.0\MT.Domain.pdb
+D:\Đồ án Sever\MovieTheater\MovieTheaterAPI\Services\MovieTheater\MT.Domain\obj\Debug\net8.0\MT.Domain.genruntimeconfig.cache
+D:\Đồ án Sever\MovieTheater\MovieTheaterAPI\Services\MovieTheater\MT.Domain\obj\Debug\net8.0\ref\MT.Domain.dll

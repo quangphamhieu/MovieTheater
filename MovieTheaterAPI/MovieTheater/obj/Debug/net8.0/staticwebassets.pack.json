@@ -1,15 +1,15 @@
 {
   "Files": [
     {
-      "Id": "D:\\Server\\MovieTheater\\MovieTheater\\MovieTheaterAPI\\MovieTheater\\wwwroot\\qrcodes\\ticket_1.png",
+      "Id": "D:\\Đồ án Sever\\MovieTheater\\MovieTheaterAPI\\MovieTheater\\wwwroot\\qrcodes\\ticket_1.png",
       "PackagePath": "staticwebassets\\qrcodes\\ticket_1.png"
     },
     {
-      "Id": "D:\\Server\\MovieTheater\\MovieTheater\\MovieTheaterAPI\\MovieTheater\\wwwroot\\qrcodes\\ticket_2.png",
+      "Id": "D:\\Đồ án Sever\\MovieTheater\\MovieTheaterAPI\\MovieTheater\\wwwroot\\qrcodes\\ticket_2.png",
       "PackagePath": "staticwebassets\\qrcodes\\ticket_2.png"
     },
     {
-      "Id": "D:\\Server\\MovieTheater\\MovieTheater\\MovieTheaterAPI\\MovieTheater\\wwwroot\\qrcodes\\ticket_3.png",
+      "Id": "D:\\Đồ án Sever\\MovieTheater\\MovieTheaterAPI\\MovieTheater\\wwwroot\\qrcodes\\ticket_3.png",
       "PackagePath": "staticwebassets\\qrcodes\\ticket_3.png"
     },
     {

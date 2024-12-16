@@ -15,5 +15,6 @@ namespace MT.Dtos.Ticket
         [Required]
         [MinLength(1, ErrorMessage = "Cần ít nhất một ghế để đặt vé")]
         public List<int> SeatIds { get; set; }
+        public string DiscountCode { get; set; }
     }
 }

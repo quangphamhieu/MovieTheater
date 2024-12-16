@@ -53,6 +53,7 @@ namespace MT.Applicationservices.Startup
             builder.Services.AddScoped<AuthenticationService>();
             builder.Services.AddScoped<EmailService>();
             builder.Services.AddScoped<IVietQrService, VietQrService>();
+            builder.Services.AddScoped<IDiscountService, DiscountService>();
         }
     }
 }

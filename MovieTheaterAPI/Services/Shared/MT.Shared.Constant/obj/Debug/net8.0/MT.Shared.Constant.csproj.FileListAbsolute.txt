@@ -27,3 +27,18 @@ D:\Server\MovieTheater\MovieTheater\MovieTheaterAPI\Services\Shared\MT.Shared.Co
 D:\Server\MovieTheater\MovieTheater\MovieTheaterAPI\Services\Shared\MT.Shared.Constant\obj\Debug\net8.0\MT.Shared.Constant.pdb
 D:\Server\MovieTheater\MovieTheater\MovieTheaterAPI\Services\Shared\MT.Shared.Constant\obj\Debug\net8.0\MT.Shared.Constant.genruntimeconfig.cache
 D:\Server\MovieTheater\MovieTheater\MovieTheaterAPI\Services\Shared\MT.Shared.Constant\obj\Debug\net8.0\ref\MT.Shared.Constant.dll
+D:\Đồ án Sever\MovieTheater\MovieTheaterAPI\Services\Shared\MT.Shared.Constant\bin\Debug\net8.0\MT.Shared.Constant.deps.json
+D:\Đồ án Sever\MovieTheater\MovieTheaterAPI\Services\Shared\MT.Shared.Constant\bin\Debug\net8.0\MT.Shared.Constant.runtimeconfig.json
+D:\Đồ án Sever\MovieTheater\MovieTheaterAPI\Services\Shared\MT.Shared.Constant\bin\Debug\net8.0\MT.Shared.Constant.dll
+D:\Đồ án Sever\MovieTheater\MovieTheaterAPI\Services\Shared\MT.Shared.Constant\bin\Debug\net8.0\MT.Shared.Constant.pdb
+D:\Đồ án Sever\MovieTheater\MovieTheaterAPI\Services\Shared\MT.Shared.Constant\obj\Debug\net8.0\MT.Shared.Constant.csproj.AssemblyReference.cache
+D:\Đồ án Sever\MovieTheater\MovieTheaterAPI\Services\Shared\MT.Shared.Constant\obj\Debug\net8.0\MT.Shared.Constant.GeneratedMSBuildEditorConfig.editorconfig
+D:\Đồ án Sever\MovieTheater\MovieTheaterAPI\Services\Shared\MT.Shared.Constant\obj\Debug\net8.0\MT.Shared.Constant.AssemblyInfoInputs.cache
+D:\Đồ án Sever\MovieTheater\MovieTheaterAPI\Services\Shared\MT.Shared.Constant\obj\Debug\net8.0\MT.Shared.Constant.AssemblyInfo.cs
+D:\Đồ án Sever\MovieTheater\MovieTheaterAPI\Services\Shared\MT.Shared.Constant\obj\Debug\net8.0\MT.Shared.Constant.csproj.CoreCompileInputs.cache
+D:\Đồ án Sever\MovieTheater\MovieTheaterAPI\Services\Shared\MT.Shared.Constant\obj\Debug\net8.0\MT.Shared.Constant.sourcelink.json
+D:\Đồ án Sever\MovieTheater\MovieTheaterAPI\Services\Shared\MT.Shared.Constant\obj\Debug\net8.0\MT.Shared.Constant.dll
+D:\Đồ án Sever\MovieTheater\MovieTheaterAPI\Services\Shared\MT.Shared.Constant\obj\Debug\net8.0\refint\MT.Shared.Constant.dll
+D:\Đồ án Sever\MovieTheater\MovieTheaterAPI\Services\Shared\MT.Shared.Constant\obj\Debug\net8.0\MT.Shared.Constant.pdb
+D:\Đồ án Sever\MovieTheater\MovieTheaterAPI\Services\Shared\MT.Shared.Constant\obj\Debug\net8.0\MT.Shared.Constant.genruntimeconfig.cache
+D:\Đồ án Sever\MovieTheater\MovieTheaterAPI\Services\Shared\MT.Shared.Constant\obj\Debug\net8.0\ref\MT.Shared.Constant.dll
