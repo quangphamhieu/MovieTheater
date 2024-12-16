@@ -18,8 +18,7 @@ namespace MT.Dtos.Ticket
         public decimal TotalPrice { get; set; }
         public DateTime BookingTime { get; set; }
         public string Status { get; set; } // Thêm trạng thái vé
-        public string DiscountCode { get; set; }
-
+        public string PaymentStatus { get; set; } = "chưa thanh toán";
     }
 
 }

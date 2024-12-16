@@ -9,7 +9,7 @@ namespace MovieTheater.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    [Authorize(Roles = "Admin")] // Restrict access to Admin role only
+    [Authorize(Roles = "Admin, Customer")] // Restrict access to Admin role only
     public class GenresController : ControllerBase
     {
         private readonly IGenreService _genreService;

@@ -28,6 +28,7 @@ namespace MT.Domain
 
         public User User { get; set; }
         public ShowTime ShowTime { get; set; }
+        public String PaymentStatus { get; set; } = "chưa thanh toán";
         public ICollection<TicketSeat> TicketSeats { get; set; } = new List<TicketSeat>();
         public ICollection<TicketDiscount> TicketDiscounts { get; set; }
     }

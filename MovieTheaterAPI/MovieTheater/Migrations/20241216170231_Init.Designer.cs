@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MovieTheater.Migrations
 {
     [DbContext(typeof(MovieTheaterDbContext))]
-    [Migration("20241216082534_Init")]
+    [Migration("20241216170231_Init")]
     partial class Init
     {
         /// <inheritdoc />
@@ -402,6 +402,10 @@ namespace MovieTheater.Migrations
 
                     b.Property<DateTime>("BookingTime")
                         .HasColumnType("datetime2");
+
+                    b.Property<string>("PaymentStatus")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("ShowTimeId")
                         .HasColumnType("int");

@@ -47,36 +47,6 @@ namespace MT.Applicationservices.Module.Implements
         }
 
         // Sinh QR thông tin vé
-        public async Task<string> GenerateTicketQrAsync(int ticketId)
-        {
-            var ticket = await _dbContext.Tickets
-                .Include(t => t.ShowTime)
-                    .ThenInclude(s => s.Movie)
-                .Include(t => t.ShowTime.CinemaRoom.Cinema)
-                .Include(t => t.TicketSeats)
-                    .ThenInclude(ts => ts.Seat)
-                .FirstOrDefaultAsync(t => t.Id == ticketId);
-
-            if (ticket == null) throw new Exception("Ticket not found.");
-
-            // Tạo thông tin vé
-            string ticketInfo = $@"
-                TicketID: {ticket.Id}
-                Movie: {ticket.ShowTime.Movie.Title}
-                Date: {ticket.ShowTime.StartTime:yyyy-MM-dd}
-                Time: {ticket.ShowTime.StartTime:HH:mm} - {ticket.ShowTime.EndTime:HH:mm}
-                Cinema: {ticket.ShowTime.CinemaRoom.Cinema.Name}
-                Room: {ticket.ShowTime.CinemaRoom.Name}
-                Seat: {string.Join(", ", ticket.TicketSeats.Select(ts => ts.Seat.SeatCode))}
-                Price: {ticket.TotalPrice:N0} VND";
-
-            // Gọi hàm để lưu QR Code thành file ảnh
-            string fileName = $"ticket_{ticket.Id}.png";
-            return GenerateAndSaveQrCode(ticketInfo, fileName);
-        }
-
-
-
 
         // Gửi email với thông tin vé và QR thông tin vé
         public async Task SendPaymentSuccessEmailAsync(int ticketId)
@@ -97,7 +67,6 @@ namespace MT.Applicationservices.Module.Implements
             if (user == null) throw new Exception("User not found.");
 
             // Tạo QR chứa thông tin vé
-            string ticketQr = await GenerateTicketQrAsync(ticketId);
 
             string subject = "Xác nhận thanh toán vé thành công";
             string message = $@"
@@ -113,8 +82,6 @@ namespace MT.Applicationservices.Module.Implements
                 <li><strong>Ghế:</strong> {string.Join(", ", ticket.TicketSeats.Select(ts => ts.Seat.SeatCode))}</li>
                 <li><strong>Tổng tiền:</strong> {ticket.TotalPrice:N0} VND</li>
             </ul>
-            <p><strong>Mã QR thông tin vé:</strong></p>
-            <img src='{ticketQr}' alt='QR Code' style='margin-top: 10px;' />
             <p>Cảm ơn bạn đã sử dụng dịch vụ của chúng tôi!</p>
         </div>";
 
@@ -122,40 +89,6 @@ namespace MT.Applicationservices.Module.Implements
         }
 
 
-        // Hàm tạo mã QR (dành cho thông tin vé)
-        private string GenerateAndSaveQrCode(string content, string fileName)
-        {
-            // Đường dẫn lưu file QR code vào wwwroot/qrcodes
-            string qrCodeSavePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/qrcodes");
-
-            // Đường dẫn HTTPS local, khớp với cổng bạn đang chạy (7214)
-            string baseUrl = "https://localhost:7214/qrcodes";
-
-            try
-            {
-                using var qrGenerator = new QRCoder.QRCodeGenerator();
-                var qrCodeData = qrGenerator.CreateQrCode(content, QRCoder.QRCodeGenerator.ECCLevel.Q);
-                var pngQrCode = new QRCoder.PngByteQRCode(qrCodeData);
-                byte[] qrCodeBytes = pngQrCode.GetGraphic(20);
-
-                // Tạo thư mục lưu nếu chưa tồn tại
-                if (!Directory.Exists(qrCodeSavePath))
-                {
-                    Directory.CreateDirectory(qrCodeSavePath);
-                }
-
-                // Lưu file QR code vào đường dẫn
-                string filePath = Path.Combine(qrCodeSavePath, fileName);
-                File.WriteAllBytes(filePath, qrCodeBytes);
-
-                // Trả về URL local HTTPS
-                return $"{baseUrl}/{fileName}";
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError($"Error generating QR code: {ex.Message}");
-                throw new Exception("Failed to generate QR code.");
-            }
-        }
+        
     }
 }

@@ -40,5 +40,19 @@ namespace MovieTheater.Controllers
             var ticket = await _ticketService.GetTicketByIdAsync(id);
             return ticket != null ? Ok(ticket) : NotFound();
         }
+        [HttpPut("update")]
+        public async Task<IActionResult> MarkTicketAsPaid(int ticketId)
+        {
+            try
+            {
+                await _ticketService.UpdatePaymentStatusAsync(ticketId);
+                return Ok("Payment status updated.");
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
     }
 }
