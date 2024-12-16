@@ -23,7 +23,7 @@ namespace MovieTheater.Controllers
             // Lấy userId từ token (JWT)
             var userId = int.Parse(User.Claims.FirstOrDefault(c => c.Type == "id")?.Value);
 
-            var ticket = await _ticketService.CreateTicketAsync(request.ShowTimeId, request.SeatIds, userId);
+            var ticket = await _ticketService.CreateTicketAsync(request, userId);
             return Ok(ticket);
         }
 

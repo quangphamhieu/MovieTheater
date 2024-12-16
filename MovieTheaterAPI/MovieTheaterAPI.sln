@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34701.34
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieTheater", "MovieTheater\MovieTheater.csproj", "{FA8A3A47-AFD6-4E77-9619-CCC57D45FEC2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MovieTheater", "MovieTheater\MovieTheater.csproj", "{FA8A3A47-AFD6-4E77-9619-CCC57D45FEC2}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{21675C79-2610-4595-B5D1-6CFA5285AB60}"
 EndProject
@@ -11,15 +11,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MovieTheater", "MovieTheate
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{478CD1D1-9473-406B-B897-0448EE43CA06}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MT.Applicationservices", "Services\MovieTheater\MT.Applicationservices\MT.Applicationservices.csproj", "{3D439842-CE01-42B7-AA90-7911D9CB6E42}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MT.Applicationservices", "Services\MovieTheater\MT.Applicationservices\MT.Applicationservices.csproj", "{3D439842-CE01-42B7-AA90-7911D9CB6E42}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MT.Infrastructure", "Services\MovieTheater\MT.Infrastructure\MT.Infrastructure.csproj", "{8B407D9B-7D81-46B7-B8A7-950D028DDACB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MT.Infrastructure", "Services\MovieTheater\MT.Infrastructure\MT.Infrastructure.csproj", "{8B407D9B-7D81-46B7-B8A7-950D028DDACB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MT.Dtos", "Services\MovieTheater\MT.Dtos\MT.Dtos.csproj", "{1850DAAA-9E0C-4AFC-BDDF-8C2C604191EA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MT.Dtos", "Services\MovieTheater\MT.Dtos\MT.Dtos.csproj", "{1850DAAA-9E0C-4AFC-BDDF-8C2C604191EA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MT.Domain", "Services\MovieTheater\MT.Domain\MT.Domain.csproj", "{0117F55D-9E18-4548-84A5-A1FB24F3C5C2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MT.Domain", "Services\MovieTheater\MT.Domain\MT.Domain.csproj", "{0117F55D-9E18-4548-84A5-A1FB24F3C5C2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MT.Shared.Constant", "Services\Shared\MT.Shared.Constant\MT.Shared.Constant.csproj", "{07954BF9-7535-4461-A11F-F9494BDA295C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MT.Shared.Constant", "Services\Shared\MT.Shared.Constant\MT.Shared.Constant.csproj", "{07954BF9-7535-4461-A11F-F9494BDA295C}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{2DA8602C-BC44-4245-ACD2-5A6F3020D8E9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{07954BF9-7535-4461-A11F-F9494BDA295C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{07954BF9-7535-4461-A11F-F9494BDA295C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{07954BF9-7535-4461-A11F-F9494BDA295C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2DA8602C-BC44-4245-ACD2-5A6F3020D8E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DA8602C-BC44-4245-ACD2-5A6F3020D8E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DA8602C-BC44-4245-ACD2-5A6F3020D8E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DA8602C-BC44-4245-ACD2-5A6F3020D8E9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

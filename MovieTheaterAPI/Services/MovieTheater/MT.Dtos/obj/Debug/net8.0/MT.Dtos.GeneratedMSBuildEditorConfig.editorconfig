@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = MT.Dtos
-build_property.ProjectDir = D:\Server\MovieTheater\MovieTheater\MovieTheaterAPI\Services\MovieTheater\MT.Dtos\
+build_property.ProjectDir = D:\Đồ án Sever\MovieTheater\MovieTheaterAPI\Services\MovieTheater\MT.Dtos\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
