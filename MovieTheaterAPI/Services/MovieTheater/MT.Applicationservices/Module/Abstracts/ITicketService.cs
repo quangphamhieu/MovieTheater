@@ -13,5 +13,6 @@ namespace MT.Applicationservices.Module.Abstracts
         Task<List<TicketDto>> GetAllTicketsAsync();
         Task UpdateTicketStatusAsync();
         Task<TicketDto> GetTicketByIdAsync(int ticketId);
+        Task UpdatePaymentStatusAsync(int ticketId);
     }
 }

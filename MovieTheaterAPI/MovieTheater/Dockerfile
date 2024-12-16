@@ -20,6 +20,7 @@ COPY ["Services/MovieTheater/MT.Domain/MT.Domain.csproj", "Services/MovieTheater
 COPY ["Services/MovieTheater/MT.Infrastructure/MT.Infrastructure.csproj", "Services/MovieTheater/MT.Infrastructure/"]
 RUN dotnet restore "./MovieTheater/MovieTheater.csproj"
 COPY . .
+RUN mkdir -p /app/wwwroot/qrcodes
 WORKDIR "/src/MovieTheater"
 RUN dotnet build "./MovieTheater.csproj" -c $BUILD_CONFIGURATION -o /app/build
 

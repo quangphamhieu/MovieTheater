@@ -113,8 +113,7 @@ namespace MT.Applicationservices.Module.Implements
                 TotalPrice = ticket.TotalPrice,
                 BookingTime = ticket.BookingTime,
                 Status = ticket.Status,
-                DiscountCode = ticketCreateRequest.DiscountCode,
-
+                PaymentStatus = ticket.PaymentStatus,
             };
         }
 
@@ -145,7 +144,8 @@ namespace MT.Applicationservices.Module.Implements
                     }).ToList(),
                     TotalPrice = t.TotalPrice,
                     BookingTime = t.BookingTime,
-                    Status = t.Status
+                    Status = t.Status,
+                    PaymentStatus = t.PaymentStatus,
                 })
                 .ToListAsync();
         }
@@ -187,11 +187,16 @@ namespace MT.Applicationservices.Module.Implements
         {
             _logger.LogInformation($"Fetching ticket with ID {ticketId}.");
 
+            // Lấy vé và các thông tin liên quan qua Include
             var ticket = await _dbContext.Tickets
                 .Include(t => t.ShowTime)
-                .Include(t => t.TicketSeats)
-                    .ThenInclude(ts => ts.Seat)
-                .FirstOrDefaultAsync(t => t.Id == ticketId);
+                    .ThenInclude(st => st.Movie) // Join đến Movie
+                .Include(t => t.ShowTime.CinemaRoom)
+                    .ThenInclude(cr => cr.Cinema) // Join đến Cinema
+                .Include(t => t.TicketSeats) // Join đến TicketSeats
+                    .ThenInclude(ts => ts.Seat) // Join đến Seat
+                .FirstOrDefaultAsync(t => t.Id == ticketId); // Lọc theo TicketId
+           
 
             if (ticket == null)
             {
@@ -199,7 +204,15 @@ namespace MT.Applicationservices.Module.Implements
                 return null;
             }
 
-            return new TicketDto
+            // Kiểm tra null và log cảnh báo nếu dữ liệu không đầy đủ
+            if (ticket.ShowTime?.Movie == null || ticket.ShowTime.CinemaRoom?.Cinema == null || ticket.TicketSeats == null)
+            {
+                _logger.LogWarning($"Incomplete data for ticket {ticketId}.");
+                throw new Exception("Incomplete ticket data.");
+            }
+
+            // Tạo đối tượng TicketDto để trả về
+            var ticketDto = new TicketDto
             {
                 TicketId = ticket.Id,
                 MovieTitle = ticket.ShowTime.Movie.Title,
@@ -214,8 +227,32 @@ namespace MT.Applicationservices.Module.Implements
                     Price = ts.Seat.Price
                 }).ToList(),
                 TotalPrice = ticket.TotalPrice,
-                BookingTime = ticket.BookingTime
+                BookingTime = ticket.BookingTime,
+                Status = ticket.Status,
+                PaymentStatus = ticket.PaymentStatus,
             };
+
+            _logger.LogInformation($"Successfully fetched ticket with ID {ticketId}.");
+            return ticketDto;
+        }
+        public async Task UpdatePaymentStatusAsync(int ticketId)
+        {
+            _logger.LogInformation($"Updating payment status for ticket with ID {ticketId}.");
+
+            var ticket = await _dbContext.Tickets.FirstOrDefaultAsync(t => t.Id == ticketId);
+
+            if (ticket == null)
+            {
+                _logger.LogWarning($"Ticket with ID {ticketId} not found.");
+                throw new Exception("Ticket not found");
+            }
+
+            // Cập nhật trạng thái thanh toán
+            ticket.PaymentStatus = "đã thanh toán";
+
+            await _dbContext.SaveChangesAsync();
+
+            _logger.LogInformation($"Payment status for ticket {ticketId} updated to 'đã thanh toán'.");
         }
     }
 }

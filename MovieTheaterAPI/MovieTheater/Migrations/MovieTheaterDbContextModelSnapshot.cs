@@ -400,6 +400,10 @@ namespace MovieTheater.Migrations
                     b.Property<DateTime>("BookingTime")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("PaymentStatus")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("ShowTimeId")
                         .HasColumnType("int");
 
