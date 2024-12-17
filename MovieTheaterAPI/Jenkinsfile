@@ -3,7 +3,6 @@ pipeline {
 
     environment {
         DOCKER_COMPOSE_PATH = 'docker-compose.yml'
-        ASPNET_IMAGE_NAME = 'movietheater-aspnet-image:latest'
     }
 
     stages {
@@ -13,19 +12,10 @@ pipeline {
                 checkout scm
             }
         }
-
-        stage('Build Docker Image') {
-            steps {
-                echo 'Building ASP.NET Core Docker image...'
-                bat "docker build -t ${ASPNET_IMAGE_NAME} -f Dockerfile ."
-            }
-        }
-
         stage('Deploy with Docker Compose') {
             steps {
                 echo 'Deploying services using Docker Compose...'
-                bat "docker-compose -f ${DOCKER_COMPOSE_PATH} down"
-                bat "docker-compose -f ${DOCKER_COMPOSE_PATH} up -d"
+                bat "docker-compose up"
             }
         }
 
