@@ -1,49 +1,52 @@
 pipeline {
     agent any
-
+    
     environment {
-        DOCKER_COMPOSE_PATH = 'docker-compose.yml'
+        IMAGE_NAME = "your-dockerhub-username/your-app"
     }
 
     stages {
-        stage('Checkout Code') {
+        stage('Build') {
             steps {
-                echo 'Checking out source code...'
-                checkout scm
-            }
-        }
-        stage('Deploy with Docker Compose') {
-            steps {
-                echo 'Deploying services using Docker Compose...'
-                bat "docker-compose up"
-            }
-        }
-
-        stage('Verify Deployment') {
-            steps {
-                echo 'Verifying deployment...'
-                bat "docker ps"
                 script {
-                    def response = bat(
-                        script: "curl -s -o NUL -w '%{http_code}' http://localhost:8080",
-                        returnStdout: true
-                    ).trim()
-                    if (response != '200') {
-                        error "Application failed health check!"
-                    } else {
-                        echo "Application is up and running."
+                    def buildDockerCompose = """
+                    docker-compose -f docker-compose.override.yml -f docker-compose.yml build
+                    """
+                    bat buildDockerCompose
+                }
+            }
+        }
+        
+        stage('Test') {
+            steps {
+                script {
+                    def runTests = """
+                    docker-compose -f docker-compose.override.yml -f docker-compose.yml run --rm your-app-service dotnet test
+                    """
+                    bat runTests
+                }
+            }
+        }
+        
+        stage('Push') {
+            steps {
+                script {
+                    docker.withRegistry('', 'docker-hub-credentials') {
+                        bat 'docker-compose -f docker-compose.override.yml -f docker-compose.yml push'
                     }
                 }
             }
         }
-    }
-
-    post {
-        success {
-            echo 'Deployment completed successfully!'
-        }
-        failure {
-            echo 'Deployment failed. Check logs for details.'
+        
+        stage('Deploy') {
+            steps {
+                script {
+                    def deployDockerCompose = """
+                    docker-compose -f docker-compose.override.yml -f docker-compose.yml up -d
+                    """
+                    bat deployDockerCompose
+                }
+            }
         }
     }
 }

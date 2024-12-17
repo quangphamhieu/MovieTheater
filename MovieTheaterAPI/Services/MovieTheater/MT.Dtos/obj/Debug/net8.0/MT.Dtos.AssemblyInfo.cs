@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MT.Dtos")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9561d4fe357ce85f0d4941938f68041a793c9f71")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8f8b7a8fdfc195f35977aab581163e2a7f0edef3")]
 [assembly: System.Reflection.AssemblyProductAttribute("MT.Dtos")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MT.Dtos")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
