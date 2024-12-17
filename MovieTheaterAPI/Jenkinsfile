@@ -27,7 +27,7 @@ pipeline {
                 bat 'docker ps'
                 script {
                     def response = bat(
-                        script: "curl -s -o NUL -w '%{http_code}' http://localhost:8080", // Sửa cổng nếu cần thiết
+                        script: "curl -s -o NUL -w '%{http_code}' http://localhost:8080/swagger", // Sửa cổng nếu cần thiết
                         returnStdout: true
                     ).trim()
                     if (response != '200') {
