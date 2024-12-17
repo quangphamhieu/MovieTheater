@@ -189,5 +189,27 @@ namespace MovieTheater.Controllers
                 return StatusCode(500, $"Internal server error: {ex.Message}");
             }
         }
+        [HttpGet("confirm")]
+        [AllowAnonymous] // Không yêu cầu xác thực
+        public async Task<IActionResult> ConfirmEmail([FromQuery] string token)
+        {
+            try
+            {
+                if (string.IsNullOrEmpty(token))
+                    return BadRequest(new { message = "Token is required." });
+
+                // Gọi service để xác nhận email
+                var isConfirmed = await _userService.ConfirmEmailAsync(token);
+
+                if (!isConfirmed)
+                    return BadRequest(new { message = "Invalid or expired token." });
+
+                return Ok(new { message = "Email confirmed successfully." });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { message = $"Internal server error: {ex.Message}" });
+            }
+        }
     }
 }

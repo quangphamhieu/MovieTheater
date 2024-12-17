@@ -98,20 +98,18 @@ namespace MT.Applicationservices.Module.Implements
 
             // Tạo thông điệp email chi tiết hơn
             var emailContent = $@"
-        Xin chào {user.FullName},
-
-        Cảm ơn bạn đã đăng ký tài khoản tại hệ thống của chúng tôi.
-
-        Dưới đây là thông tin tài khoản của bạn:
-        - Email: {user.Email}
-        - Mật khẩu: {user.Password}
-
-        Mã xác thực của bạn là: {token}
-
-        Vui lòng xác nhận email của bạn để hoàn tất quá trình đăng ký.
-
-        Trân trọng,
-        Đội ngũ hỗ trợ hệ thống.
+    <div style='font-family: Arial, sans-serif; line-height: 1.6;'>
+        <h2 style='color: #4CAF50;'>Chào {user.FullName},</h2>
+        <p>Cảm ơn bạn đã đăng ký tài khoản tại hệ thống của chúng tôi.</p>
+        <p><strong>Thông tin tài khoản của bạn:</strong></p>
+        <ul>
+            <li><strong>Email:</strong> {user.Email}</li>
+            <li><strong>Mật khẩu:</strong> {user.Password}</li>
+        </ul>
+        <p><strong>Mã xác thực của bạn là:</strong> {token}</p>
+        <p>Vui lòng xác nhận email của bạn để hoàn tất quá trình đăng ký.</p>
+        <p>Trân trọng,<br />Đội ngũ hỗ trợ hệ thống</p>
+    </div>
     ";
 
             // Gửi email với thông điệp chi tiết
