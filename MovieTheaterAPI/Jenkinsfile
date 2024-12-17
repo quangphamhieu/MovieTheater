@@ -17,25 +17,25 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 echo 'Building ASP.NET Core Docker image...'
-                sh 'docker build -t ${ASPNET_IMAGE_NAME} -f Dockerfile .'
+                bat "docker build -t ${ASPNET_IMAGE_NAME} -f Dockerfile ."
             }
         }
 
         stage('Deploy with Docker Compose') {
             steps {
                 echo 'Deploying services using Docker Compose...'
-                sh 'docker-compose -f ${DOCKER_COMPOSE_PATH} down'
-                sh 'docker-compose -f ${DOCKER_COMPOSE_PATH} up -d'
+                bat "docker-compose -f ${DOCKER_COMPOSE_PATH} down"
+                bat "docker-compose -f ${DOCKER_COMPOSE_PATH} up -d"
             }
         }
 
         stage('Verify Deployment') {
             steps {
                 echo 'Verifying deployment...'
-                sh 'docker ps'
+                bat "docker ps"
                 script {
-                    def response = sh(
-                        script: "curl -s -o /dev/null -w '%{http_code}' http://localhost:5000",
+                    def response = bat(
+                        script: "curl -s -o NUL -w '%{http_code}' http://localhost:8080",
                         returnStdout: true
                     ).trim()
                     if (response != '200') {
