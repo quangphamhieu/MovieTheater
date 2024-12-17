@@ -3,7 +3,6 @@ pipeline {
 
     environment {
         DOCKER_COMPOSE_PATH = 'docker-compose.yml'
-        ASPNET_IMAGE_NAME = 'movietheater-aspnet-image:latest'
     }
 
     stages {
@@ -14,33 +13,27 @@ pipeline {
             }
         }
 
-        stage('Build Docker Image') {
-            steps {
-                echo 'Building ASP.NET Core Docker image...'
-                bat 'docker build -t ${ASPNET_IMAGE_NAME} -f Dockerfile .'
-            }
-        }
-
         stage('Deploy with Docker Compose') {
             steps {
                 echo 'Deploying services using Docker Compose...'
-                bat 'docker-compose -f ${DOCKER_COMPOSE_PATH} down'
-                bat 'docker-compose -f ${DOCKER_COMPOSE_PATH} up -d'
+                bat 'docker-compose -f ${DOCKER_COMPOSE_PATH} down' // Dừng các container cũ
+                bat 'docker-compose -f ${DOCKER_COMPOSE_PATH} up --build -d' // Build lại image và khởi động container
             }
         }
 
         stage('Verify Deployment') {
             steps {
-                echo 'Verifying deployment on port 8080...'
+                echo 'Verifying deployment...'
+                bat 'docker ps'
                 script {
                     def response = bat(
-                        script: "curl -s -o /dev/null -w %%{http_code} http://localhost:8080",
+                        script: "curl -s -o NUL -w '%{http_code}' http://localhost:8080", // Sửa cổng nếu cần thiết
                         returnStdout: true
                     ).trim()
                     if (response != '200') {
-                        error "Application failed health check on port 8080!"
+                        error "Application failed health check!"
                     } else {
-                        echo "Application is running successfully on port 8080."
+                        echo "Application is up and running."
                     }
                 }
             }
