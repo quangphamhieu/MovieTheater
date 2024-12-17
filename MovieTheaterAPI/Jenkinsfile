@@ -16,8 +16,8 @@ pipeline {
         stage('Deploy with Docker Compose') {
             steps {
                 echo 'Deploying services using Docker Compose...'
-                bat 'docker-compose -f ${DOCKER_COMPOSE_PATH} down' // Dừng các container cũ
-                bat 'docker-compose -f ${DOCKER_COMPOSE_PATH} up --build -d' // Build lại image và khởi động container
+                bat 'docker-compose -f C:/ProgramData/Jenkins/.jenkins/workspace/MovieTheater/MovieTheaterAPI/docker-compose.yml down' // Dừng các container cũ
+                bat 'docker-compose -f C:/ProgramData/Jenkins/.jenkins/workspace/MovieTheater/MovieTheaterAPI/docker-compose.yml up --build -d' // Build lại image và khởi động container
             }
         }
 
