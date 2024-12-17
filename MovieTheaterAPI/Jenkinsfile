@@ -1,52 +1,58 @@
 pipeline {
     agent any
-    
+
     environment {
-        IMAGE_NAME = "your-dockerhub-username/your-app"
+        DOCKER_COMPOSE_PATH = 'docker-compose.yml'
+        ASPNET_IMAGE_NAME = 'movietheater-aspnet-image:latest'
     }
 
     stages {
-        stage('Build') {
+        stage('Checkout Code') {
             steps {
-                script {
-                    def buildDockerCompose = """
-                    docker-compose -f docker-compose.override.yml -f docker-compose.yml build
-                    """
-                    bat buildDockerCompose
-                }
+                echo 'Checking out source code...'
+                checkout scm
             }
         }
-        
-        stage('Test') {
+
+        stage('Build Docker Image') {
             steps {
-                script {
-                    def runTests = """
-                    docker-compose -f docker-compose.override.yml -f docker-compose.yml run --rm your-app-service dotnet test
-                    """
-                    bat runTests
-                }
+                echo 'Building ASP.NET Core Docker image...'
+                bat 'docker build -t ${ASPNET_IMAGE_NAME} -f Dockerfile .'
             }
         }
-        
-        stage('Push') {
+
+        stage('Deploy with Docker Compose') {
             steps {
+                echo 'Deploying services using Docker Compose...'
+                bat 'docker-compose -f ${DOCKER_COMPOSE_PATH} down'
+                bat 'docker-compose -f ${DOCKER_COMPOSE_PATH} up -d'
+            }
+        }
+
+        stage('Verify Deployment') {
+            steps {
+                echo 'Verifying deployment on port 8080...'
                 script {
-                    docker.withRegistry('', 'docker-hub-credentials') {
-                        bat 'docker-compose -f docker-compose.override.yml -f docker-compose.yml push'
+                    def response = bat(
+                        script: "curl -s -o /dev/null -w %%{http_code} http://localhost:8080",
+                        returnStdout: true
+                    ).trim()
+                    if (response != '200') {
+                        error "Application failed health check on port 8080!"
+                    } else {
+                        echo "Application is running successfully on port 8080."
                     }
                 }
             }
         }
-        
-        stage('Deploy') {
-            steps {
-                script {
-                    def deployDockerCompose = """
-                    docker-compose -f docker-compose.override.yml -f docker-compose.yml up -d
-                    """
-                    bat deployDockerCompose
-                }
-            }
+    }
+
+    post {
+        success {
+            echo 'Deployment completed successfully!'
+        }
+        failure {
+            echo 'Deployment failed. Check logs for details.'
         }
     }
 }
